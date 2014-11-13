@@ -48,7 +48,7 @@ either. Play with it, read the docs, experiment, ask for help.
 
 > Graphic: twelve column grid
 
-_[Others include](https://www.google.com/search?q=css%2012%20column%20grid): Bootstrap, Foundation, Responsive Grid System, 1140px, Skeleton, Gridinator, Metro UI CSS, Columnal, Aeon, Gridicolous&hellip;
+_[Others include](https://www.google.com/search?q=css%2012%20column%20grid): Bootstrap, Foundation, Responsive Grid System, 1140px, Skeleton, Gridinator, Metro UI CSS, Columnal, Aeon, Gridicolous&hellip;_
 
 # Why so many 12 column grids?
 
