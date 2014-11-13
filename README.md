@@ -231,6 +231,8 @@ second call is on a different grid system.
 
 > Animation of the resume which shows the change in visual order from source order
 
+# Yeah this part isn't finished yet.
+
 --------------------------------------------------------------------------------
 
 # Tellin' em' what ya told 'em:
