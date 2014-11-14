@@ -11,7 +11,7 @@ Taylor Smith
 tsmith512 on Twitter, LinkedIn, GitHub, Facebook  
 Designer / Frontend Dev at Four Kitchens
 
-_These slides and example materials are all on the Internet. You can stop writing._
+_These slides, references, and examples are all on the Internet. You can stop writing._
 
 ## You Probably Already Know
 
@@ -210,8 +210,8 @@ Duh.
 
 ## If you used Susy Grids, you think you've already solved this problem, don't you?
 
-- Desktop: `@include grid-span(6, 6);` (second 6 of 12 columns)
-- Mobile:  `@include grid-span(12, 12);` or just `width:100%`
+- Wide: `@include grid-span(6, 6);` (second 6 of 12 columns, or whatever)
+- Narrow:  `@include grid-span(12, 12);` or just `width:100%`
 
 Nope.
 
@@ -230,7 +230,7 @@ Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
 **Note:** just having multiple grids defined isn't enough. You need to call
 `grid-span` inside a `breakpoint` to trigger the new layout. Occasionally, this
 will mean repeating yourself (esp. in the case of `grid-span(1,1)`), but the
-second call is on a different grid system.
+second call would be on a different grid system, so the output is new.
 
 --------------------------------------------------------------------------------
 
