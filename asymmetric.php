@@ -42,9 +42,11 @@
 
   <p><strong>Example 4:</strong> <code class="language-scss">@include add-grid(2 4 2)</code></p>
   <div class="container example-4">
+    <div class="header"><div class="caption">Header</div></div>
     <div class="item"><div class="caption">Left Nav</div></div>
     <div class="item2"><div class="caption">Main Body</div></div>
     <div class="item3"><div class="caption">Right Rail</div></div>
+    <div class="footer"><div class="caption">Footer</div></div>
   </div>
 
 <?php include 'includes/footer.php'; ?>
