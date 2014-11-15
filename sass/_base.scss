@@ -1,0 +1,33 @@
+@import "reset";
+
+@import "compass";
+@import "toolkit";
+@import "toolkit/kickstart";
+@import "breakpoint";
+@import "singularitygs";
+
+// For some very basic typography, colors, and framing:
+@import 'style';
+
+// For syntax highlighting:
+@import 'prismjs';
+
+
+// Be sure to enable debug mode for your grid visualization so show up:
+@include sgs-change('debug', true);
+
+// Standardize the color of the background grid so we can change it later:
+$grid-color: $grey-md;
+
+// I will apply .container to each "row" in the example file
+.container {
+  @include clearfix();
+  min-height: 100px;
+  border: 1px solid lighten($grey-dk, 20%);
+
+  > div {
+    height: 100px;
+    background: #444;
+  }
+}
+

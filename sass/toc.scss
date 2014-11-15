@@ -1,0 +1,13 @@
+// Base includes imports, basic config, and global example items
+@import 'base';
+
+// Define the 12 column grid with 1/3 gutters:
+@include add-grid(2 4 at 500px);
+@include add-grid(2 4 2 at 800px);
+@include add-gutter(1/3);
+
+.toc {
+  // Add the background grid simulation:
+  @include background-grid($color: $grid-color);
+
+}
