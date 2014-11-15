@@ -104,7 +104,7 @@ No more terrible class names.
   .cyan    { @include grid-span(1,1); }
   .magenta { @include grid-span(2,2); }
   .yellow  { @include grid-span(3,4); }
-  .black   { @include grid-span(4,8); }
+  .black   { @include grid-span(4,7); }
 ```
 
 > Graphic of |C|M|M|Y|Y|Y|K|K|K|K|11|12|
