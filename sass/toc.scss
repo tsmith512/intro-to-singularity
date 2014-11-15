@@ -1,13 +1,67 @@
 // Base includes imports, basic config, and global example items
 @import 'base';
 
+$one-col: max-width 599px;
+$less-than-three: max-width 899px;
+$two-col: 600px 899px;
+$three-col: 900px;
+
 // Define the 12 column grid with 1/3 gutters:
-@include add-grid(2 4 at 500px);
-@include add-grid(2 4 2 at 800px);
-@include add-gutter(1/3);
+@include add-grid(1 1 at 600px);
+@include add-grid(2 4 3 at 900px);
+@include add-gutter(1/8 at 600px);
+@include add-gutter(1/4 at 900px);
 
 .toc {
-  // Add the background grid simulation:
-  @include background-grid($color: $grid-color);
+  @include clearfix();
 
+  .intro {
+    @include breakpoint($two-col) {
+      @include grid-span(2,1);
+      clear: both;
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(2,1);
+    }
+  }
+
+  .references {
+    @include breakpoint($two-col) {
+      @include grid-span(1,2);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,3);
+      clear: right;
+    }
+  }
+
+  .index {
+    @include breakpoint($two-col) {
+      @include grid-span(1,1);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(2,1);
+      clear: left;
+    }
+
+    a {
+      font-weight: 600;
+      margin-bottom: 1em;
+
+      @include breakpoint($less-than-three) {
+        display: block;
+      }
+    }
+  }
+}
+
+div > ul > li {
+  margin-bottom: 1em;
+}
+
+h4 {
+  @include breakpoint($one-col) {
+    border-top: 1px solid darken($grey-lt, 5%);
+    padding-top: 1em;
+  }
 }

@@ -4,10 +4,44 @@
   include 'includes/header.php';
 ?>
 
-  <h3>Thank You</h3>
-  <p>
-    Thanks for attending my presentation today. Compiled here, you'll find the
-    slides, examples, and references I discussed.
-  </p>
+  <h3>Wrap-Up</h3>
+
+  <div class="toc">
+    <div class="intro">
+      <h4>Thank You</h4>
+      <p>
+        Thanks for attending my presentation today. Compiled here, you'll find
+        the slides, examples, and references I discussed.
+      </p>
+    </div>
+    <div class="references">
+      <h4>References</h4>
+      <ul>
+        <li><h5>Projects</h5>
+          <ul>
+            <li><a href="http://sass-lang.com/">Sass</a></li>
+            <li><a href="http://compass-style.org/">Compass</a></li>
+            <li><a href="http://bundler.io/">Bundler</a></li>
+            <li><a href="http://singularity.gs/">Singularity</a></li>
+            <li><a href="http://breakpoint-sass.com/">Breakpoint</a></li>
+          </ul>
+        </li>
+        <li><h5>Documentation</h5>
+          <ul>
+            <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric Grids</a></li>
+            <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric Grids</a></li>
+            <li>CSS-Tricks: <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="index">
+      <h4>Examples</h4>
+      <ul>
+        <li><a href="twelve.php">Twelve Column Grid</a> Building and spanning a standard twelve column grid with Singularity</li>
+        <li><a href="asymmetric.php">Asymmetric and Content-First Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
+      </ul>
+    </div>
+  </div>
 
 <?php include 'includes/footer.php'; ?>

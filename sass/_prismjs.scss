@@ -63,6 +63,8 @@ code[class*="language"] {
 	border-radius: 0.3em;
 	color: #c92c2c;
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .token.comment,

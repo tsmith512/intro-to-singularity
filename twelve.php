@@ -9,18 +9,18 @@
     A simple twelve column grid a child item one-column wide.
   </p>
   <div class="container twelve-column">
-    <div class="item">&nbsp;</div>
+    <div class="item"><div class="caption get-width"></div></div>
   </div>
 
   <p>
     The same grid, with child items which span multiple columns using
-    <code>grid-span()</code>
+    <code class="language-scss">grid-span()</code>
   </p>
   <div class="container twelve-column">
-    <div class="cyan">&nbsp;</div>
-    <div class="magenta">&nbsp;</div>
-    <div class="yellow">&nbsp;</div>
-    <div class="black">&nbsp;</div>
+    <div class="cyan"><div class="caption get-width"></div></div>
+    <div class="magenta"><div class="caption get-width"></div></div>
+    <div class="yellow"><div class="caption get-width"></div></div>
+    <div class="black"><div class="caption get-width"></div></div>
   </div>
   <p>
     Remember that the background grid is created using CSS3 gradients and is not

@@ -26,8 +26,8 @@ $grid-color: $grey-md;
   border: 1px solid lighten($grey-dk, 20%);
 
   > div {
+    position: relative;
     height: 100px;
-    background: #444;
+    background: $orange;
   }
 }
-
