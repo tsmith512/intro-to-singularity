@@ -17,6 +17,7 @@ _These slides, references, and examples are all on the Internet. You can stop wr
 
 You're here at ATXSass, so I'm assuming you know about these things:
 
+  @include clearfix();
 - [Sass](http://sass-lang.com/)
 - [Compass](http://compass-style.org/)
 - How to get them running on a project with [Bundler](http://bundler.io/)
