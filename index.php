@@ -23,7 +23,9 @@
             <li><a href="http://compass-style.org/">Compass</a></li>
             <li><a href="http://bundler.io/">Bundler</a></li>
             <li><a href="http://singularity.gs/">Singularity</a></li>
+            <li><a href="https://github.com/at-import/Singularity-extras">Singularity Extras</a></li>
             <li><a href="http://breakpoint-sass.com/">Breakpoint</a></li>
+            <li><a href="https://github.com/at-import/toolkit">Toolkit</a></li>
           </ul>
         </li>
         <li><h5>Documentation</h5>
@@ -33,13 +35,18 @@
             <li>CSS-Tricks: <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
           </ul>
         </li>
+        <li><h5>Other Presentations</h5>
+          <ul>
+            <li>Snugug: <a href="http://snugug.github.io/responsive-grids/">Responsive Grids</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
     <div class="index">
       <h4>Examples</h4>
       <ul>
         <li><a href="twelve.php">Twelve Column Grid</a> Building and spanning a standard twelve column grid with Singularity</li>
-        <li><a href="asymmetric.php">Asymmetric and Content-First Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
+        <li><a href="asymmetric.php">Asymmetric Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
       </ul>
     </div>
   </div>

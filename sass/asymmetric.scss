@@ -28,3 +28,30 @@
     .item2 { @include grid-span(1,2); background-color: $blue; }
   }
 }
+
+@include layout($grid: 2 6) {
+  .example-3 {
+    // Add the background grid simulation:
+    @include background-grid($color: $grid-color);
+
+    > div { background-color: $blue; }
+
+    // A standard first column
+    .item { @include grid-span(1,1); }
+    .item2 { @include grid-span(1,2); }
+  }
+}
+
+@include layout($grid: 2 4 2) {
+  .example-4 {
+    // Add the background grid simulation:
+    @include background-grid($color: $grid-color);
+
+    > div { background-color: $blue; }
+
+    // A standard first column
+    .item { @include grid-span(1,1); }
+    .item2 { @include grid-span(1,2); }
+    .item3 { @include grid-span(1,3); }
+  }
+}
