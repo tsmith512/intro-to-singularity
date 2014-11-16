@@ -1,0 +1,81 @@
+// Base includes imports, basic config, and global example items
+@import 'base';
+
+$two-col: 600px 899px;
+$three-col: 900px;
+
+@include add-grid(1 1);
+@include add-grid(2 4 3 at $three-col);
+@include add-gutter(1/8);
+@include add-gutter(1/4 at $three-col);
+
+.example-1 {
+  @include background-grid($color: $grid-color);
+
+  .left {
+    @include breakpoint($two-col) {
+      @include grid-span(1,1);
+      clear: both;
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,1);
+    }
+  }
+
+  .center {
+    @include breakpoint($two-col) {
+      @include grid-span(2,1);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,2);
+    }
+  }
+
+  .right {
+    @include breakpoint($two-col) {
+      @include grid-span(1,2);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,3);
+    }
+  }
+}
+
+.example-2 {
+  // Note that the global add-grid and add-gutter statements still apply here,
+  // so we're using the same breakpoint that we used above, just to keep things
+  // easy in this extra example.
+  $funky-columns: 900px;
+  $adjust-at: 1000px; // To illustrate a point.
+
+  @include add-grid(4);
+  @include add-grid(2 4 3 1 at $funky-columns);
+  @include add-gutter(1/8);
+  @include add-gutter(1/4 at $funky-columns);
+
+  @include background-grid($color: $grid-color);
+
+  .item1 { @include grid-span(1,1);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,1);
+    }
+  }
+
+  .item2 { @include grid-span(1,2);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,2);
+    }
+  }
+
+  .item3 { @include grid-span(1,3);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,3);
+    }
+  }
+
+  .item4 { @include grid-span(1,4);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,4);
+    }
+  }
+}

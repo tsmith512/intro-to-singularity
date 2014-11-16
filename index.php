@@ -32,6 +32,7 @@
           <ul>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric Grids</a></li>
+            <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Output-Styles">Output Styles: Float vs. Isolation</a></li>
             <li>CSS-Tricks: <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
           </ul>
         </li>
@@ -47,6 +48,7 @@
       <ul>
         <li><a href="twelve.php">Twelve Column Grid</a> Building and spanning a standard twelve column grid with Singularity</li>
         <li><a href="asymmetric.php">Asymmetric Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
+        <li><a href="breakpoint.php">Adding Breakpoint</a> Building responsive grid systems with Breakpoint and Singularity together</li>
       </ul>
     </div>
   </div>

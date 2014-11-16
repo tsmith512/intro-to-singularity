@@ -1,4 +1,4 @@
-    <h3>Sass for these examples:</h3>
+    <h3>Sass for this page:</h3>
     <pre><code class="language-scss"><?php include 'sass/' . $stylesheet . '.scss'; ?></code></pre>
 
   </div>

@@ -6,7 +6,6 @@ $less-than-three: max-width 899px;
 $two-col: 600px 899px;
 $three-col: 900px;
 
-// Define the 12 column grid with 1/3 gutters:
 @include add-grid(1 1 at 600px);
 @include add-grid(2 4 3 at 900px);
 @include add-gutter(1/8 at 600px);
