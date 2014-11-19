@@ -11,10 +11,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <link rel="stylesheet" href="../js/vendor/reveal/css/reveal.min.css" />
-    <link rel="stylesheet" href="../js/vendor/reveal/css/theme/default.css" id="theme" />
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6795652/627226/css/fonts.css" />
 
-    <link rel="stylesheet" href="../css/prismjs.css" />
+    <link rel="stylesheet" href="../js/vendor/reveal/css/reveal.min.css" />
+    <link rel="stylesheet" href="../css/slides.css" />
 
     <!--[if lt IE 9]>
     <script src="../js/vendor/reveal/lib/js/html5shiv.js"></script>
@@ -25,33 +25,40 @@
   <div class="reveal">
     <div class="slides">
       <section>
-        <section id="intro">
+        <section id="title">
 
-          <h1>Taylor Smith</h1>
-          <p class="large">@tsmith512 on
-            <a href="https://github.com/tsmith512">Github</a>,
-            <a href="https://twitter.com/tsmith512">Twitter</a>,
-            <a href="https://linkedin.com/in/tsmith512">LinkedIn</a>,
-            <a href="https://behance.net/tsmith512">Behance</a>,
-            <a href="https://facebook.com/tsmith512">Facebook</a>
-          </p>
-          <p class="large">
-            Designer / Frontend Developer at
-            <a href="http://www.fourkitchens.com">Four Kitchens</a>
-          </p>
-          <p>
-            These slides, references, and examples are online!
-          </p>
+            <h1>Intro to Singularity</h1>
+            <p class="large">These slides, references, and examples are online!</p>
+
+        </section>
+        <section id="intro" data-state="blackmail">
+
+          <!-- <div class="columns"> -->
+            <h1>
+              Taylor Smith
+            </h1>
+            <h2>
+              Designer / Frontend Dev <br /> @ <a href="http://www.fourkitchens.com">Four Kitchens</a>
+            </h2>
+            <p>
+              <strong>tsmith512</strong> on
+              <a href="https://github.com/tsmith512">Github</a>,
+              <a href="https://twitter.com/tsmith512">Twitter</a>,
+              <br />
+              <a href="https://linkedin.com/in/tsmith512">LinkedIn</a>,
+              <a href="https://behance.net/tsmith512">Behance</a>,
+              <a href="https://facebook.com/tsmith512">Facebook</a>
+            </p>
+          <!-- </div> -->
 
         </section>
         <section>
 
           <h1>Prerequisites</h1>
-          <h2>You're here at ATXSass, so I assume you already know:</h2>
-          <ul>
-            <li><a href="http://sass-lang.com">Sass</a></li>
-            <li><a href="http://compass-style.org">Compass</a></li>
-            <li>How to get these running on a project with <a href="http://bundler.io">Bundler</a></li>
+          <h2>You're at ATXSass, so I assume you:</h2>
+          <ul class="two-col">
+            <li>Know <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a></li>
+            <li>Can get them running on a project with <a href="http://bundler.io">Bundler</a></li>
             <li>
               Have used at least one grid system or framework like
               <a href="http://960.gs">960</a>,
@@ -60,51 +67,49 @@
               or <a href="http://susy.oddbird.net">Susy</a>
             </li>
             <li>
-              How to <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">
-              use the <code>border-box</code> box sizing mode</a> and do so.
+              Know why to <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">
+              use the <code>border-box</code> box sizing mode</a> and do so
             </li>
           </ul>
 
         </section>
-        <section>
+        <section id="goals">
 
-          <h1>Introduction</h1>
-          <h2>Tellin&rsquo; &rsquo;em what yer gonna tell &rsquo;em:</h2>
-          <ul>
+          <h1><a href="http://singularity.gs/">Singularity</a> will:</h1>
+          <ul class="two-col">
             <li>
-              <strong><a href="http://singularity.gs/">Singularity</a>:
-                "Grids without Limits" will</strong>
-            </li>
-            <li>
-              <em>Meet your needs:</em> <br />
+              <strong>Meet your needs:</strong> <br />
               Create your own grid system, just the way you want it.
             </li>
             <li>
-              <em>Not let the tool dictate your outcome:</em> <br />
+              <strong>Tool won't dictate outcome:</strong> <br />
               You've probably never <em>really</em> needed 12 columns, you just needed fractions.
             </li>
             <li>
-              <em>Not tie you to terrible presentation class names:</em> <br />
+              <strong>Free of presentational classes:</strong> <br />
               Because <code>.push-3</code>, <code>.col-md-6</code>, or <code>.large-8</code> don't mean anything; it's litter.
             </li>
             <li>
-              <em>Let you make different types of grids:</em> <br />
-              <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric</a> (equal-width column)
-              or <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric</a> (varied width-column) grids
+              <strong>Allow different types of grids:</strong> <br />
+              <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric</a> (equal-width column),
+              <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric</a> (varied width-column) grids,
+              and <a href="https://github.com/at-import/Singularity-extras">more</a>.
             </li>
             <li>
-              <em>Be powerfully responsive:</em> <br />
-              Change your layouts and couple with <a href="http://breakpoint-sass.com/">Breakpoint</a>
+              <strong>Be powerfully responsive:</strong> <br />
+              Change your layouts when coupled with <a href="http://breakpoint-sass.com/">Breakpoint</a>
             </li>
             <li>
-              <em>Not let your visual layout be determined by your source order:</em> <br />
+              <strong>Visual order &ne; source order:</strong> <br />
               Awesomeness which cannot be summed in a sentence fragment.
             </li>
             <li>
-              <strong>Example case:</strong> Aunt Flossy's R&eacute;sum&eacute;
+              <strong>Example case:</strong> <br />
+              Aunt Flossy's R&eacute;sum&eacute;
             </li>
             <li>
-              <strong>More info:</strong> Additional Resources and Examples
+              <strong>More info:</strong> <br />
+              Additional Resources and Examples
             </li>
           </ul>
 
@@ -112,12 +117,10 @@
         <section>
 
           <h1>Introduction</h1>
-          <h2>Presenting like an airplane: high-level and fast</h2>
+          <h2>Airplane presentation: high &amp; fast</h2>
           <p class="large">
-            This is an intro chat. Singularity is immensely flexible, and
-            there's a lot it does that I can't get to in a half hour. And
-            there's stuff I don't know yet, either. Play with it, read the docs,
-            experiment, ask for help.
+            Singularity is immensely flexible. There are things I cannot cover
+            today. Play with it, read the docs, experiment, ask for help.
           </p>
 
         </section>
@@ -128,9 +131,9 @@
 
           <h1>What was 960?</h1>
           <h2>Just a twelve column grid</h2>
-          <figure>
-            Twelve Column Grid
-          </figure>
+
+          <img src="gfx/960_logo.png" alt="960 Grid System logo" />
+
           <p class="small"><a href="https://www.google.com/search?q=css%2012%20column%20grid">Others Include:</a> Bootstrap, Foundation, Responsive Grid System, 1140px, Skeleton, Gridinator, Metro UI CSS, Columnal, Aeon, Gridicolous&hellip;</p>
 
         </section>
@@ -138,7 +141,7 @@
 
           <h1>Why so many 12-column grids?</h1>
           <h2>Because math.</h2>
-          <ul>
+          <ul class="two-col bold">
             <li>12 &divide; 2 = 6</li>
             <li>12 &divide; 3 = 4</li>
             <li>12 &divide; 4 = 3</li>
@@ -157,7 +160,7 @@
           <h1>What is Singularity?</h1>
 
           <p class="large">
-            Just another way to make columns and gutters.
+            Just another way to make columns and gutters. <br />
             But you can futz with &rsquo;em.
           </p>
 
@@ -168,7 +171,7 @@
 
           <img src="gfx/960.jpg" alt="960 Grid"/>
 
-          <p>
+          <p class="citation">
             Image from <a href="http://sixrevisions.com/web_design/the-960-grid-system-made-easy/">
             <em>Six Revisions:</em> The 960 Grid System Made Easy</a>.
           </p>
@@ -196,20 +199,17 @@
             to put an element in a column.
           </p>
 
+
           <img src="gfx/twelve-col-span.png" alt="Spanning the twelve column grid" />
 
-<pre><code class="language-scss">  @include add-grid(12);
-  @include add-gutter(1/3);
-  .item { @include grid-span(1,1); }
-  .cyan    { @include grid-span(1,1); }
-  .magenta { @include grid-span(2,2); }
-  .yellow  { @include grid-span(3,4); }
-  .black   { @include grid-span(4,7); }
-  // @include grid-span( width, starting-position starting-at-one );
+<pre><code class="language-scss">  @include add-grid(12); @include add-gutter(1/3);
+  .item    { @include grid-span(1,1); }
+  .cyan    { @include grid-span(1,1); }  .magenta { @include grid-span(2,2); }
+  .yellow  { @include grid-span(3,4); }  .black   { @include grid-span(4,7); }
 </code></pre>
 
           <p class="small">
-            <a href="../twelve.php">See example file.</a>
+            <a href="../twelve.php" target="_blank">See example file.</a>
           </p>
 
         </section>
@@ -217,7 +217,7 @@
 
           <h1>No More Terrible Class Names!</h1>
 
-          <img src="gfx/yay.gif" alt="YAY!!!" />
+          <img src="gfx/yay.gif" alt="YAY!!!" style="width: 800px; height: auto;"/>
 
         </section>
         <section>
@@ -237,14 +237,19 @@
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
+      // The "normal" size of the presentation, aspect ratio will be preserved
+      // when the presentation is scaled to fit different resolutions. Can be
+      // specified using percentage units.
+      width: 1200,
+      height: 800,
+
       controls: true,
       progress: true,
       history: true,
       center: true,
       keyboard: true,
 
-      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+      transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
 
       // Optional libraries used to extend on reveal.js
       dependencies: [

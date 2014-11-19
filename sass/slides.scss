@@ -1,0 +1,181 @@
+@import '../js/vendor/reveal/css/theme/template/mixins.scss';
+@import '../js/vendor/reveal/css/theme/template/settings.scss';
+@import 'variables';
+
+// Base settings for all themes that can optionally be
+// overridden by the super-theme
+
+// Background of the presentation
+$backgroundColor: $grey-lt;
+
+// Primary/body text
+$mainFont: $whitney;
+$mainFontSize: 32px;
+$mainColor: $grey-dk;
+
+// Headings
+$headingMargin: 0 0 16px 0;
+$headingFont: $tungsten;
+$headingColor: $blue;
+$headingLineHeight: 0.9em;
+$headingLetterSpacing: 0.02em;
+$headingTextTransform: uppercase;
+$headingTextShadow: 1px 1px 0px rgba(255,255,255,0.75);
+$heading1TextShadow: 1px 1px 0px rgba(0,0,0,0.75);
+
+// Links and actions
+$linkColor: $blue;
+$linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+$selectionBackgroundColor: $orange;
+$selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+@mixin bodyBackground() {
+  background: $backgroundColor;
+}
+
+@import '../js/vendor/reveal/css/theme/template/theme.scss';
+@import 'prismjs';
+
+// Extendables:
+%flex-two-col {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+
+
+  > * {
+    width: 50%;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+}
+
+// My overrides:
+.reveal {
+
+  h1 {
+    font-weight: 600;
+  }
+
+  h2 {
+    text-transform: none;
+    color: mix($grey-md, $grey-dk);
+  }
+
+  p {
+    margin: 1em 0;
+  }
+
+
+  p.large {
+    border-style: solid;
+    border-color: #bbb;
+    border-width: 2px 0;
+    padding: 1em 0;
+    font-size: 38px;
+    font-weight: 700;
+  }
+
+  p.small {
+    border-style: dotted;
+    border-color: #bbb;
+    border-width: 1px 0;
+    padding: 1em 0;
+    font-size: 24px;
+    font-style: italic;
+  }
+
+  p.citation {
+    margin-top: 0;
+    font-size: 18px;
+    font-style: italic;
+  }
+
+  ul li {
+    margin-bottom: 0.5em !important;
+  }
+
+  ul.two-col {
+    list-style: none;
+    margin: 1em 0;
+    padding: 0;
+
+    @extend %flex-two-col;
+
+    li {
+      box-sizing: border-box;
+      text-align: center;
+      padding: 1em;
+      margin-bottom: 0;
+    }
+
+  }
+
+  .columns {
+    @extend %flex-two-col;
+  }
+
+  .bold {
+    font-weight: 600;
+  }
+
+  pre {
+    font-size: 0.75em;
+  }
+}
+
+// Special slides:
+
+.blackmail body {
+  background: {
+    image: url('../slides/gfx/blackmail.jpg');
+    size: contain;
+    position: left center;
+    color: white;
+    repeat: no-repeat;
+  }
+
+}
+
+#intro {
+  right: 0;
+  text-align: right;
+}
+
+#goals {
+  .two-col li {
+    padding-top: 0;
+  }
+}
