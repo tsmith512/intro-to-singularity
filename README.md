@@ -218,12 +218,14 @@ Nope.
 
 ## Singularity allows different Grids at Different Sizes:
 
+At its widest, this resume uses this grid:
+
 ``` scss
-  // The grid I started with, "full size"
   @include add-grid(1 2 2 3 1);
 ```
 
-Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
+But Singularity allows me to use different grids at different sizes. These are
+the grids now in use in production:
 
 ``` scss
   @include add-grid(2);
@@ -235,7 +237,31 @@ Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
 
 ## Singularity and Breakpoint play well together:
 
-> Animation with multiple grids, slowly
+Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
+
+``` scss
+  $headers-left: 850px;
+  $details-horizontal: 1000px;
+
+  @include add-grid(2);
+  @include add-grid(1 2 2 at 850px);
+  @include add-grid(1 2 2 3 1 at 1000px);
+
+  h2 { // Subheaders "Work", "Education", etc.
+    text-align: center;
+    font-size: 3em;
+
+    @include breakpoint($headers-left) {
+      @include grid-span(1,1);
+      text-align: right;
+      font-size: 2em;
+    }
+
+    @include breakpoint($details-horizontal) {
+      @include grid-span(1,1);
+    }
+  }
+```
 
 **Note:** just having multiple grids defined isn't enough. You need to call
 `grid-span` inside a `breakpoint` to trigger the new layout. Occasionally, this
