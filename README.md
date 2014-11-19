@@ -235,6 +235,8 @@ the grids now in use in production:
   @include add-gutter(1/4 at 850px);
 ```
 
+> Animation of grid system
+
 ## Singularity and Breakpoint play well together:
 
 Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
@@ -258,7 +260,7 @@ Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
     }
 
     @include breakpoint($details-horizontal) {
-      @include grid-span(1,1);
+      @include grid-span(1,1); // Still 1,1; but in a different grid!
     }
   }
 ```
