@@ -218,11 +218,20 @@ Nope.
 
 ## Singularity allows different Grids at Different Sizes:
 
-> Code snip: header of my resume
+``` scss
+  // The grid I started with, "full size"
+  @include add-grid(1 2 2 3 1);
+```
 
 Combine this with [Breakpoint](http://breakpoint-sass.com/) calls like so:
 
-> Code snip: something from my resume
+``` scss
+  @include add-grid(2);
+  @include add-grid(1 2 2 at 850px);
+  @include add-grid(1 2 2 3 1 at 1000px);
+  @include add-gutter(1/8);
+  @include add-gutter(1/4 at 850px);
+```
 
 ## Singularity and Breakpoint play well together:
 
