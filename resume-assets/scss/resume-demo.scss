@@ -1,0 +1,19 @@
+// Just the libraries included in the resume build, not the reset or the kickstart
+@import 'toolkit';
+@import 'breakpoint';
+@import 'singularitygs';
+
+// Bring our config in from the real resume
+@import '../../resume/scss/variables';
+
+// Turn on the debug options so we can have our background grid
+@include sgs-change('debug', true);
+
+#background-grid.show {
+  @include background-grid($color: #ddd);
+}
+
+#toggle-grid {
+  display: block;
+  margin: 1em auto 0 auto;
+}

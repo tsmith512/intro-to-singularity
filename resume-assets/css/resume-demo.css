@@ -1,0 +1,18 @@
+#background-grid.show {
+  background-image: linear-gradient(to right, #ddd 0%, #ddd 47.05882%, #e5e5e5 47.05882%, #e5e5e5 52.94118%, #ddd 52.94118%, #ddd);
+}
+@media (min-width: 850px) {
+  #background-grid.show {
+    background-image: linear-gradient(to right, #ddd 0%, #ddd 18.18182%, #e5e5e5 18.18182%, #e5e5e5 22.72727%, #ddd 22.72727%, #ddd 59.09091%, #e5e5e5 59.09091%, #e5e5e5 63.63636%, #ddd 63.63636%, #ddd);
+  }
+}
+@media (min-width: 1000px) {
+  #background-grid.show {
+    background-image: linear-gradient(to right, #ddd 0%, #ddd 10%, #e5e5e5 10%, #e5e5e5 12.5%, #ddd 12.5%, #ddd 32.5%, #e5e5e5 32.5%, #e5e5e5 35%, #ddd 35%, #ddd 55%, #e5e5e5 55%, #e5e5e5 57.5%, #ddd 57.5%, #ddd 87.5%, #e5e5e5 87.5%, #e5e5e5 90%, #ddd 90%, #ddd);
+  }
+}
+
+#toggle-grid {
+  display: block;
+  margin: 1em auto 0 auto;
+}
