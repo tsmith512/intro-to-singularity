@@ -29,56 +29,15 @@ order, and no more terrible class names.
 
 ## Weren't we escaping the 12-column menace?
 
-Yup. Just change your `add-grid` argument.
-
-```
-  add-grid(X);     // X equal columns
-  add-gutter(1/3); // Intercolumn space is one third the width of one column
-```
-
-> Graphic animating the changes in the value of X: 12 -> 10 -> 7 -> 5
-
-Couldn't do tenths, sevenths, or fifths before, now could ya?
-
---------------------------------------------------------------------------------
-
 # Asymmetric Grids
-
-Singularity has two basic ways to specify the number of columns. When an integer
-is provided (as you've seen), that number of equal columns is created. But:
 
 ## Singularity's `add-grid` argument can be a list instead
 
-I've shown you this:
-
-```
-  add-grid(4);     // Four equal columns
-```
-
-You could also write that this way:
-
-```
-  add-grid(1 1 1 1);     // Four equal columns
-```
-
 ## Asymmetric Columns = Varied Widths
-
-```
-  add-grid(1 1 1 1);     // Four columns
-```
-
-> Animation: Change a `1` to `2`
-
-> Something which implies "BOOM"
 
 ## This is useful why, exactly?
 
-I **could not** make myself think this way and stuck to my comfy 12-column
-approach. Then I needed to change the width of one column. That sucked.
-
 > Animate a find and replace of `grid-span` statements.
-
-_We use Sass because `CTRL-F` should not be a development tool._
 
 ## Changing Thought Processes
 

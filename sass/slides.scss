@@ -100,12 +100,29 @@ $selectionColor: #fff;
 
 
   p.large {
-    border-style: solid;
-    border-color: #bbb;
-    border-width: 2px 0;
-    padding: 1em 0;
-    font-size: 38px;
+    border-bottom: 1px solid #bbb;
+    border-top: 1px solid #fff;
+    padding: 0.5em 0;
+    font-size: 36px;
     font-weight: 700;
+
+    position: relative;
+
+    &:before, &:after {
+      position: absolute;
+      left: 0;
+      right: 0;
+      content: " ";
+      font-size: 0;
+    }
+    &:before {
+      top: -2px;
+      border-top: 1px solid #bbb;
+    }
+    &:after {
+      bottom: -2px;
+      border-bottom: 1px solid #fff;
+    }
   }
 
   p.small {

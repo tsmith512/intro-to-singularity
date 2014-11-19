@@ -191,7 +191,7 @@
 
         </section>
         <section>
-          
+
           <h1>Spanning the 12-column grid:</h1>
 
           <p>
@@ -209,7 +209,8 @@
 </code></pre>
 
           <p class="small">
-            <a href="../twelve.php" target="_blank">See example file.</a>
+            <a href="../twelve.php" target="_blank">See example file.</a> |
+            <a href="http://sassmeister.com/gist/520885a8605b7788c687" target="_blank">Play on SassMeister</a>
           </p>
 
         </section>
@@ -220,7 +221,80 @@
           <img src="gfx/yay.gif" alt="YAY!!!" style="width: 800px; height: auto;"/>
 
         </section>
+      </section>
+      <section>
+        <section id="symmetric">
+          <h1>Symmetric Grids</h1>
+          <h2>Escaping the 12-column menace: Change the add-grid() argument.</h2>
+
+          <img src="gfx/symmetric-animation.gif" alt="Changing the argument in add-grid() changes the number of columns" />
+
+          <p class="small">
+            Couldn't do tenths, sevenths, or fifths before, now could ya?
+          </p>
+        </section>
         <section>
+          <h1>Symmetric Grids</h1>
+
+<pre><code class="language-scss">  @include add-grid(X);       // X equal columns
+  @include add-gutter(1/3);   // Intercolumn space: 1/3 the width of one column.
+</code></pre>
+
+        </section>
+      </section>
+      <section>
+        <section>
+
+          <h1>Another Way</h1>
+          <p class="large">
+            Singularity has two basic ways to specify the number of columns.
+          </p>
+
+        </section>
+        <section>
+
+          <h1>add-grid() can take a list instead</h1>
+
+          <p>You've seen a single integer:</p>
+
+<pre><code class="language-scss">  @include add-grid(4); // 4 equal columns</code></pre>
+
+          <p>You can also write that this way:</p>
+
+<pre><code class="language-scss">  @include add-grid(1 1 1 1); // 4 equal columns</code></pre>
+
+          <p class="large">
+            And what might happen if we changed a 1 to 2?
+          </p>
+
+        </section>
+        <section>
+
+          <h1>Asymmetric Grids</h1>
+          <h2>Columns of varying widths</h2>
+
+          <img src="gfx/asymmetric-animation.gif" alt="Changing the argument in add-grid() can increase the relative width of a column" />
+
+        </section>
+        <section>
+
+          <h1>Woah</h1>
+          <img src="gfx/woah.gif" alt="Woah" />
+
+        </section>
+        <section>
+
+          <h1>But why?</h1>
+          <h2>I <strong>could not</strong> make myself think this way. At first.</h2>
+
+          <p>
+            I stuck to my comfy 12-column grid system without any issue. One day,
+            I needed to change the width of a column. That sucked.
+          </p>
+
+          <p class="large">
+            We use Sass because <em>CTRL-F</em> should not be a dev tool.
+          </p>
 
         </section>
 
