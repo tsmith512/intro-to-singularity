@@ -1,3 +1,6 @@
 [submodule "revealjs"]
 	path = js/vendor/reveal
 	url = https://github.com/hakimel/reveal.js.git
+[submodule "resume"]
+	path = resume
+	url = https://github.com/tsmith512/resume.git
