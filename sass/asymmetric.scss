@@ -34,8 +34,6 @@
     // Add the background grid simulation:
     @include background-grid($color: $grid-color);
 
-    > div { background-color: $blue; }
-
     // A standard first column
     .item { @include grid-span(1,1); }
     .item2 { @include grid-span(1,2); }
@@ -46,8 +44,6 @@
   .example-4 {
     // Add the background grid simulation:
     @include background-grid($color: $grid-color);
-
-    > div { background-color: $blue; }
 
     // A standard first column
     .header { /* For a full-width region, no need to add a grid-span() */ }

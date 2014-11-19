@@ -13,8 +13,13 @@
   .item { @include grid-span(1,1); }
 
   // The spanning examples:
-  .cyan    { @include grid-span(1,1); background: cyan;}
-  .magenta { @include grid-span(2,2); background: magenta;}
-  .yellow  { @include grid-span(3,4); background: yellow;}
-  .black   { @include grid-span(4,7); background: black; .caption { color: white; }}
+  .cyan    { @include grid-span(1,1); background: cyan; }
+  .magenta { @include grid-span(2,2); background: magenta; }
+  .yellow  { @include grid-span(3,4); background: yellow; }
+  .black   { @include grid-span(4,7); background: black; }
+
+  // Since the white wasn't easy to read on these:
+  #{nest('.cyan, .magenta, .yellow', '.caption')} {
+    color: $grey-dk;
+  }
 }

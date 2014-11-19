@@ -9,7 +9,9 @@
 </head>
 <body>
   <div class="wrapper">
-    <?php if ($stylesheet !='toc') : ?><a href="index.php" class="back" title="Index"><?php endif; ?>
-    <h1>Intro to Singularity</h1>
-    <?php if ($stylesheet !='toc') : ?></a><?php endif; ?>
+    <h1>
+      <?php if ($stylesheet !='toc') : ?><a href="index.php" class="back" title="Index"><?php endif; ?>
+      Intro to Singularity
+      <?php if ($stylesheet !='toc') : ?></a><?php endif; ?>
+    </h1>
     <h2><?php echo $title ?></h2>
