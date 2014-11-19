@@ -289,8 +289,12 @@
 
           <p>
             I stuck to my comfy 12-column grid system without any issue. One day,
-            I needed to change the width of a column. That sucked.
+            I needed to change the width of a column. That sucked:
           </p>
+
+<pre><code class="language-scss">.every-single-element {
+  @include grid-span(X,Y); // Manual updates. Is this 6? 8? Or 4? Oops.
+}</code></pre>
 
           <p class="large">
             We use Sass because <em>CTRL-F</em> should not be a dev tool.
@@ -365,16 +369,141 @@
           </div>
 
         </section>
-        <section>
+        <section id="her-resume">
 
           <h1>Her R&eacute;sum&eacute;</h1>
 
+          <div class="columns">
+            <div>
+              <img src="gfx/resume-preview.png" alt="Resume" />
+            </div>
+            <div>
+              <p>
+                What could be more tabular and <br />
+                grid-centric than a r&eacute;sum&eacute;?
+              </p>
+              <p class="bold">
+                So let's build one.
+              </p>
+            </div>
+          </div>
+
+        </section>
+        <section>
+
+          <h1>The Grid Setup</h1>
+
+          <img src="gfx/resume-preview-with-grid.png" alt="Resume with Grid Overlay" />
+
+<pre><code class="language-scss">@include add-grid(1 2 2 3 1);
+@include add-gutter(1/4);</code></pre>
+
+        </section>
+        <section>
+
+          <h1>But wait!</h1>
+          <h2>Should this r&eacute;sum&eacute; be responsive?</h2>
+
+          <video data-autoplay loop src="gfx/resume-expanding.mp4" width="640" height="360"></video>
+
+          <p class="large">Duh.</p>
+
+        </section>
+        <section>
+
+          <h1>Susy Grids users</h1>
+          <h2>probably think they've got this figured out&hellip;</h2>
+
+          <ul class="two-col">
+            <li>
+              <strong>Wide:</strong> <br />
+              <code class="language-scss">@include grid-span(6, 6);</code><br />
+              <em>(or whatever)</em>
+            </li>
+            <li>
+              <strong>Narrow:</strong> <br />
+              <code class="language-scss">@include grid-span(12, 1);</code><br />
+              <em>(or just <code class="language-css">width:100%;</code>)</em>
+            </li>
+          </ul>
+
           <p class="large">
-            What could be more tabular and grid-centric than a r&eacute;sum&eacute;?
-            <br />So let's build one.
+            Nope.
           </p>
 
         </section>
+        <section>
+
+          <h1>Different Grids at Different Sizes</h1>
+
+
+          <div class="columns">
+            <div>
+              <p>Desktop-only:</p>
+<pre><code class="language-scss">@include add-grid(1 2 2 3 1);
+
+
+@include add-gutter(1/4);
+&nbsp;</code></pre>
+            </div>
+            <div>
+              <p>Grids that grow and change:</p>
+<pre><code class="language-scss">@include add-grid(2);
+@include add-grid(1 2 2 at 850px);
+@include add-grid(1 2 2 3 1 at 1000px);
+@include add-gutter(1/8);
+@include add-gutter(1/4 at 850px);</code></pre>
+            </div>
+          </div>
+
+        </section>
+        <section>
+
+          <h1>Look again</h1>
+          <h2>With the Background Grid in place</h2>
+
+          <video data-autoplay loop src="gfx/resume-expanding-grid.mp4" width="640" height="360"></video>
+
+        </section>
+        <section>
+
+          <h1>You know kung fu.</h1>
+
+          <img src="gfx/kungfu.gif" alt="Neo motioning" style="width:800px;height:auto;"/>
+
+        </section>
+        <section>
+
+          <h1>And this was designed to work with <a href="http://breakpoint-sass.com/">Breakpoint</a></h1>
+
+<pre><code class="language-scss">@include add-grid(2);
+@include add-grid(1 2 2 at 850px);
+@include add-grid(1 2 2 3 1 at 1000px);
+
+h2 {
+  text-align: center;
+  @include breakpoint(850px)  { @include grid-span(1,1); text-align: right; }
+  @include breakpoint(1000px) { @include grid-span(1,1); /* * */            }
+}</code></pre>
+
+          <p class="small">
+            <strong>*</strong> It's still (1,1), but it's a new context.
+          </p>
+
+        </section>
+        <section>
+
+          <h1>¡Ojo!</h1>
+
+          <p class="large">
+            <em>Note:</em> just having multiple grids defined isn't enough. You
+            need to call <code class="language-scss">@include grid-span()</code>
+            inside a <code class="language-scss">@include breakpoint()</code> to
+            trigger the new layout.
+          </p>
+
+        </section>
+
       </section>
     </div>
   </div>
