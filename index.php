@@ -17,6 +17,7 @@
     <div class="references">
       <h4>References</h4>
       <ul>
+        <li><strong><a href="slides/index.html">Presentation Slides</a></strong></li>
         <li><h5>Projects</h5>
           <ul>
             <li><a href="http://sass-lang.com/">Sass</a></li>

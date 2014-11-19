@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Intro to Singularity with @tsmith512</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="../js/vendor/reveal/css/reveal.min.css" />
+    <link rel="stylesheet" href="../js/vendor/reveal/css/theme/default.css" id="theme" />
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="../js/vendor/reveal/lib/css/zenburn.css" />
+
+    <!--[if lt IE 9]>
+    <script src="../js/vendor/reveal/lib/js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+  <div class="reveal">
+    <div class="slides">
+      <section id="intro">
+        <section>
+          <h1>Taylor Smith</h1>
+          <p class="large">@tsmith512 on
+            <a href="https://github.com/tsmith512">Github</a>,
+            <a href="https://twitter.com/tsmith512">Twitter</a>,
+            <a href="https://linkedin.com/in/tsmith512">LinkedIn</a>,
+            <a href="https://behance.net/tsmith512">Behance</a>,
+            <a href="https://facebook.com/tsmith512">Facebook</a>
+          </p>
+          <p class="large">
+            Designer / Frontend Developer at
+            <a href="http://www.fourkitchens.com">Four Kitchens</a>
+          </p>
+          <p>
+            These slides, references, and examples are online!
+          </p>
+        </section>
+        <section>
+          <h1>Prerequisites</h1>
+          <h2>You're here at ATXSass, so I assume you already know:</h2>
+          <ul>
+            <li><a href="http://sass-lang.com">Sass</a></li>
+            <li><a href="http://compass-style.org">Compass</a></li>
+            <li>How to get these running on a project with <a href="http://bundler.io">Bundler</a></li>
+            <li>
+              Have used at least one grid system or framework like
+              <a href="http://960.gs">960</a>,
+              <a href="http://getbootstrap.com/examples/grid">Bootstrap</a>,
+              <a href="http://foundation.surb.com/grid.html">Foundation</a>,
+              or <a href="http://susy.oddbird.net">Susy</a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h1>Introduction</h1>
+          <h2>Tellin&rsquo; &rsquo;em what yer gonna tell &rsquo;em:</h2>
+          <ul>
+            <li><strong><a href="http://singularity.gs/">Singularity</a>: "Grids without Limits" will</strong></li>
+            <li><em>Meet your needs:</em> <br />
+            Create your own grid system, just the way you want it.</li>
+            <li><em>Not let the tool dictate your outcome:</em> <br />
+            You've probably never <em>really</em> needed 12 columns, you just needed fractions.</li>
+            <li><em>Not tie you to terrible presentation class names:</em> <br />
+            Because <code>.push-3</code>, <code>.col-md-6</code>, or <code>.large-8</code> don't mean anything; it's litter.</li>
+            <li><em>Let you make different types of grids:</em> <br />
+            <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric</a> (equal-width column)
+            or <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric</a> (varied width-column) grids</li>
+            <li><em>Be powerfully responsive:</em> <br />
+            Change your layouts and couple with <a href="http://breakpoint-sass.com/">Breakpoint</a></li>
+            <li><em>Not let your visual layout be determined by your source order:</em> <br />
+            Awesomeness which cannot be summed in a sentence fragment.</li>
+            <li><strong>Example case:</strong> Aunt Flossy's R&eacute;sum&eacute;</li>
+            <li><strong>More info:</strong> Additional Resources and Examples</li>
+          </ul>
+        </section>
+        <section>
+          <h1>Introduction</h1>
+          <h2>Presenting like an airplane: high-level and fast</h2>
+          <p class="large">
+            This is an intro chat. Singularity is immensely flexible, and
+            there's a lot it does that I can't get to in a half hour. And
+            there's stuff I don't know yet, either. Play with it, read the docs,
+            experiment, ask for help.
+          </p>
+        </section>
+      </section>
+    </div>
+  </div>
+
+  <script src="../js/vendor/reveal/lib/js/head.min.js"></script>
+  <script src="../js/vendor/reveal/js/reveal.min.js"></script>
+
+  <script>
+
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
+      keyboard: true,
+
+      theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+      transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+      // Optional libraries used to extend on reveal.js
+      dependencies: [
+        { src: '../js/vendor/reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+        { src: '../js/vendor/reveal/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../js/vendor/reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: '../js/vendor/reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        { src: '../js/vendor/reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+        { src: '../js/vendor/reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+    });
+
+    </script>
+  </body>
+</html>

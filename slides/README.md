@@ -7,48 +7,11 @@ order, and no more terrible class names.
 
 # Introduction to Singularity Grids
 
-Taylor Smith  
-tsmith512 on Twitter, LinkedIn, GitHub, Facebook  
-Designer / Frontend Dev at Four Kitchens
-
-_These slides, references, and examples are all on the Internet. You can stop writing._
-
 ## You Probably Already Know
-
-You're here at ATXSass, so I'm assuming you know about these things:
-
-  @include clearfix();
-- [Sass](http://sass-lang.com/)
-- [Compass](http://compass-style.org/)
-- How to get them running on a project with [Bundler](http://bundler.io/)
-- Have used at least one grid system or framework like
-  [960](http://960.gs/), [Bootstrap](http://getbootstrap.com/examples/grid/),
-  [Foundation](http://foundation.zurb.com/grid.html), or [Susy](http://susy.oddbird.net/)
 
 ## Tellin' 'em what yer gonna tell 'em:
 
-- **[Singularity](http://singularity.gs/): "Grids without Limits" will**
-- _Meet your needs:_  
-  Create your own grid system, just the way you want it.
-- _Not let the tool dictate your outcome:_  
-  You've probably never _really_ needed 12 columns, you just needed fractions.
-- _Not tie you to terrible presentation class names:_  
-  Because `.push-3`, `.col-md-6`, or `.large-8` don't mean anything; it's litter.
-- _Let you make different types of grids:_  
-  [Symmetric](https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids) (equal-width column)
-  or [Asymmetric](https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids) (varied width-column) grids
-- _Be powerfully responsive:_  
-  Change your layouts and couple with [Breakpoint](http://breakpoint-sass.com/)
-- _Not let your visual layout be determined by your source order:_  
-  Awesomeness which cannot be summed in a sentence fragment.
-- **Example case:** Aunt Flossy's R&eacute;sum&eacute;
-- **More info:** Additional Resources and Examples
-
 ## Presenting like an Airplane: High-level and Fast
-
-This is an intro chat. Singularity is immensely flexible, and there's a lot it
-does that I can't get to in a half hour. And there's stuff I don't know yet,
-either. Play with it, read the docs, experiment, ask for help.
 
 --------------------------------------------------------------------------------
 
