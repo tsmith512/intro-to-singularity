@@ -105,7 +105,7 @@
             </li>
             <li>
               <strong>Example case:</strong> <br />
-              Aunt Flossy's R&eacute;sum&eacute;
+              Aunt Flossie's R&eacute;sum&eacute;
             </li>
             <li>
               <strong>More info:</strong> <br />
@@ -297,7 +297,79 @@
           </p>
 
         </section>
+      </section>
+      <section>
+        <section id="thought-process">
 
+          <h1>A New (Old) Thought Process</h1>
+
+          <p class="large">
+            It's not about first, second, ... twelfth column. It's about:
+          </p>
+
+          <ul class="two-col bold">
+            <li>The main column and the rail.</li>
+            <li>The side-by-side with the sidebar.</li>
+            <li>The left nav, the article, and the sidebar with filters and  ads.</li>
+            <li>That stupid four column mega menu you tried to talk them out of.</li>
+          </ul>
+
+        </section>
+        <section id="familiar">
+
+          <h1>Do those words sound familiar?</h1>
+
+          <img src="gfx/designer.gif" alt="Designers talking" style="width: 700px; height: auto" />
+
+          <p class="large">
+            They should. Those are words the designers are using.
+          </p>
+
+        </section>
+        <section>
+
+          <h1>Create Grids for your Content</h1>
+          <h2>Don't cram them into prefab fractions</h2>
+
+<pre><code class="language-scss">  // Not real code:
+  @include add-grid( LeftNav BodyArea RightRail );
+
+  // Real code:
+  @include add-grid( 2 4 1 );
+
+  // Anoter possibility:
+  @include add-grid( 2 4 300px ); // * See below.</code></pre>
+
+          <p class="small">
+            <strong>*</strong> You could even use
+            <a href="http://snugug.com/musings/bulletproof-combo-fixed-and-fluid-grids-css3-calc">Singularity Extras and the Calc output method</a><br />
+            to specify that right rail in pixels, like ad dimensions.
+            <a href="http://sassmeister.com/gist/419d8416616fbf6bd99f">Example on SassMeister</a>.
+          </p>
+
+        </section>
+      </section>
+      <section>
+        <section id="flossie">
+
+          <h1>An Example</h1>
+
+          <div class="columns">
+            <div>
+              <img src="gfx/flossie.jpg" alt="Aunt Flossie (Fictional)" />
+            </div>
+            <div>
+              <h2>Meet Aunt Flossie</h2>
+              <p>She's a dice inspector in Vegas.</p>
+            </div>
+          </div>
+
+        </section>
+        <section>
+
+          <h1>Her R&eacute;sum&eacute;</h1>
+
+        </section>
       </section>
     </div>
   </div>

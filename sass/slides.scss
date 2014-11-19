@@ -82,6 +82,14 @@ $selectionColor: #fff;
   }
 }
 
+%flex-two-col-mid {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 // My overrides:
 .reveal {
 
@@ -194,5 +202,11 @@ $selectionColor: #fff;
 #goals {
   .two-col li {
     padding-top: 0;
+  }
+}
+
+#flossie {
+  .columns {
+    @extend %flex-two-col-mid;
   }
 }

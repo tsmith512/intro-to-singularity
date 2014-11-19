@@ -41,35 +41,14 @@ order, and no more terrible class names.
 
 ## Changing Thought Processes
 
-This one is hard. Here's how I do it:
-
-It's not about the first, second, third, etc. column. It's about the main column
-and the rail. It's about the side-by-side with the sidebar. It's about the left
-nav and the body and the sidebar with the filters and the ads.
-
 ## Do Those Words Sound Familiar?
-
-**They should. Those are words that designers use.**
-
-```
-  // Not real code:
-  add-grid( LeftNav BodyArea RightRail );
-```
-
-**Create grids for your content. Don't cram your content into prefab fractions.**
 
 ## Examples In Action
 
-> - Texas Exes with overlay
-> - World Pulse with overlay
 
 --------------------------------------------------------------------------------
 
 # Another Example: Meet Aunt Flossy
-
-> "She's a ..." (something really crazy, like knocker-up, coconut safety engineer, dice inspector, pet food taster, etc.)
-
-Let's review her r&eacute;sum&eacute;.
 
 > - Resume with overlay
 

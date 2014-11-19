@@ -35,6 +35,7 @@
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Output-Styles">Output Styles: Float vs. Isolation</a></li>
+            <li>Snugug: <a href="http://snugug.com/musings/bulletproof-combo-fixed-and-fluid-grids-css3-calc">Bulletproof Combo Fixed and Fluid Grids with Css3 Calc</a></li>
             <li>CSS-Tricks: <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
           </ul>
         </li>
