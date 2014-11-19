@@ -17,67 +17,15 @@ order, and no more terrible class names.
 
 # What was 960?
 
-> Graphic: twelve column grid
-
-_[Others include](https://www.google.com/search?q=css%2012%20column%20grid): Bootstrap, Foundation, Responsive Grid System, 1140px, Skeleton, Gridinator, Metro UI CSS, Columnal, Aeon, Gridicolous&hellip;_
-
 # Why so many 12 column grids?
-
-Because math.
-
-- 12 &divide; 2 = 6
-- 12 &divide; 3 = 4
-- 12 &divide; 4 = 3
-- 12 &divide; 6 = 2
-- 12 &divide; 12 = 1
-
-Twelve is a least common multiple for the number of columns you _actually_
-needed. How often did you actually use 12 even columns?
-
-_(If you did, have you considered [Flexbox](http://css-tricks.com/snippets/css/a-guide-to-flexbox/)?)_
 
 # What is Singularity?
 
-Just columns and gutters. But you can futz with 'em.
-
 ## Going from 960 (or whatever) to Singularity
-
-> Boost that graphic from Snugug showing what 960gs looks like in Singularity
-
-You can build this in Singularity, if you want to. It's what I used to do.
-
-_(Hint: Don't get used to that. It's easier to change now.)_
 
 ## That's all, folks!
 
-```
-  add-grid(12);    // Twelve equal columns
-  add-gutter(1/3); // Intercolumn space is one third the width of one column
-  .item { @include grid-span(1,1); } // .item is the first column.
-```
-
-> Graphic of |**X**|2|3|4|5|6|7|8|9|10|11|12|
-
-Include `grid-span()` to put an element in a column.
-
-No more terrible class names.
-
 ## Spanning that 12-column grid
-
-```
-  .cyan    { @include grid-span(1,1); }
-  .magenta { @include grid-span(2,2); }
-  .yellow  { @include grid-span(3,4); }
-  .black   { @include grid-span(4,7); }
-```
-
-> Graphic of |C|M|M|Y|Y|Y|K|K|K|K|11|12|
-
-```
-  @include grid-span( width, starting-position* );
-```
-
-\* Addresses are indexed starting at 1, like how people count stuff.
 
 ## Weren't we escaping the 12-column menace?
 

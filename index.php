@@ -31,6 +31,7 @@
         </li>
         <li><h5>Documentation</h5>
           <ul>
+            <li>Paul Irish: <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">* { Box-sizing: Border-box } FTW</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Output-Styles">Output Styles: Float vs. Isolation</a></li>
