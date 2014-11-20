@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Combining Breakpoint and Singularity | Introduction to Singularity</title>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6795652/627226/css/fonts.css" />
+  <link rel="stylesheet" href="css/bp.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>
+      <a href="index.html" class="back" title="Index">      Intro to Singularity
+      </a>    </h1>
+    <h2>Combining Breakpoint and Singularity</h2>
+
+  <h3>Responsive Grids:</h3>
+  <p>
+    By adding <code class="language-scss">@import add-grid(X at 600px)</code>,
+    you can specify a new set of grids (or gutter, using the same syntax) at a
+    particular min-width breakpoint.
+  </p>
+  <div class="container example-1">
+    <div class="center"><div class="caption">Body</div></div>
+    <div class="left"><div class="caption">Left Nav</div></div>
+    <div class="right"><div class="caption">Right Rail</div></div>
+  </div>
+  <p>
+    Note that the <em>source order</em> is seen at the narrowest (one-column)
+    breakpoint. In this example, the main body is output first, followed by the
+    left nav, and then the right rail. But the widest layout lays these out in a
+    single row, with the body appearing second.
+  </p>
+  <p>
+    This is possible using Singularity's
+    <a href="https://github.com/at-import/Singularity/wiki/Output-Styles"><em>Isolation</em> output style</a>.
+    It works best when rearranging content which will ultimately be in one "row,"
+    but by adding some <code class="language-css">clear</code> rules after the
+    <code class="language-scss">@include grid-span()</code> rules, you can
+    achieve a lot of flexibility.
+  </p>
+
+  <p><strong>Example 2:</strong> Four columns, but different widths at different sizes</p>
+  <div class="container example-2">
+    <div class="item1"><div class="caption get-width"></div></div>
+    <div class="item2"><div class="caption get-width"></div></div>
+    <div class="item3"><div class="caption get-width"></div></div>
+    <div class="item4"><div class="caption get-width"></div></div>
+  </div>
+
+  <p>
+    Note that the <em>grid</em> changes at 900px, but the adjustment doesn't
+    happen until 1000px. <strong>Singularity won't try to read your mind and make
+    automatic adjustments for you.</strong> If you want to rearrange your items
+    each time the grid changes, you'll need to make a breakpoint when the grid
+    changes.
+  </p>
+  <p>
+    This is useful if you wanted to set up a two or three column display in a
+    nested area and just keep it as your grid continues to change at larger
+    sizes. It does mean you may write the same
+    <code class="language-scss">@include grid-span()</code> declaration twice,
+    but keep in mind that the rule has a different output because the grid
+    context has changed.
+  </p>
+
+    <h3>Sass for this page:</h3>
+    <pre><code class="language-scss">// Base includes imports, basic config, and global example items
+@import 'base';
+
+$two-col: 600px 899px;
+$three-col: 900px;
+
+@include add-grid(1 1);
+@include add-grid(2 4 3 at $three-col);
+@include add-gutter(1/8);
+@include add-gutter(1/4 at $three-col);
+
+.example-1 {
+  @include background-grid($color: $grid-color);
+
+  .left {
+    @include breakpoint($two-col) {
+      @include grid-span(1,1);
+      clear: both;
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,1);
+    }
+  }
+
+  .center {
+    @include breakpoint($two-col) {
+      @include grid-span(2,1);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,2);
+    }
+  }
+
+  .right {
+    @include breakpoint($two-col) {
+      @include grid-span(1,2);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,3);
+    }
+  }
+}
+
+.example-2 {
+  // Note that the global add-grid and add-gutter statements still apply here,
+  // so we're using the same breakpoint that we used above, just to keep things
+  // easy in this extra example.
+  $funky-columns: 900px;
+  $adjust-at: 1000px; // To illustrate a point.
+
+  @include add-grid(4);
+  @include add-grid(2 4 3 1 at $funky-columns);
+  @include add-gutter(1/8);
+  @include add-gutter(1/4 at $funky-columns);
+
+  @include background-grid($color: $grid-color);
+
+  .item1 { @include grid-span(1,1);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,1);
+    }
+  }
+
+  .item2 { @include grid-span(1,2);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,2);
+    }
+  }
+
+  .item3 { @include grid-span(1,3);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,3);
+    }
+  }
+
+  .item4 { @include grid-span(1,4);
+    @include breakpoint($adjust-at) {
+      @include grid-span(1,4);
+    }
+  }
+}
+</code></pre>
+
+  </div>
+  <script src="js/vendor/prism.js"></script>
+  <script src="js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

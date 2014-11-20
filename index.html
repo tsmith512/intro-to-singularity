@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table of Contents | Introduction to Singularity</title>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6795652/627226/css/fonts.css" />
+  <link rel="stylesheet" href="css/toc.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>
+            Intro to Singularity
+          </h1>
+    <h2>Table of Contents</h2>
+
+  <h3>Wrap-Up</h3>
+
+  <div class="toc">
+    <div class="intro">
+      <h4>Thank You</h4>
+      <p>
+        Thanks for attending my presentation today. Compiled here, you'll find
+        the slides, examples, and references I discussed.
+      </p>
+    </div>
+    <div class="references">
+      <h4>References</h4>
+      <ul>
+        <li><strong><a href="slides/index.html">Presentation Slides</a></strong></li>
+        <li><strong><a href="resume.html">Aunt Flossie's Resume</a></strong></li>
+        <li><h5>Projects</h5>
+          <ul>
+            <li><a href="http://sass-lang.com/">Sass</a></li>
+            <li><a href="http://compass-style.org/">Compass</a></li>
+            <li><a href="http://bundler.io/">Bundler</a></li>
+            <li><a href="http://singularity.gs/">Singularity</a></li>
+            <li><a href="https://github.com/at-import/Singularity-extras">Singularity Extras</a></li>
+            <li><a href="http://breakpoint-sass.com/">Breakpoint</a></li>
+            <li><a href="https://github.com/at-import/toolkit">Toolkit</a></li>
+          </ul>
+        </li>
+        <li><h5>Documentation</h5>
+          <ul>
+            <li>Paul Irish: <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">* { Box-sizing: Border-box } FTW</a></li>
+            <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric Grids</a></li>
+            <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric Grids</a></li>
+            <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Output-Styles">Output Styles: Float vs. Isolation</a></li>
+            <li>Snugug: <a href="http://snugug.com/musings/bulletproof-combo-fixed-and-fluid-grids-css3-calc">Bulletproof Combo Fixed and Fluid Grids with Css3 Calc</a></li>
+            <li>CSS-Tricks: <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">A Guide to Flexbox</a></li>
+          </ul>
+        </li>
+        <li><h5>Other Presentations</h5>
+          <ul>
+            <li>Snugug: <a href="http://snugug.github.io/responsive-grids/">Responsive Grids</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="index">
+      <h4>Examples</h4>
+      <ul>
+        <li><a href="twelve.html">Twelve Column Grid</a> Building and spanning a standard twelve column grid with Singularity</li>
+        <li><a href="asymmetric.html">Asymmetric Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
+        <li><a href="breakpoint.html">Adding Breakpoint</a> Building responsive grid systems with Breakpoint and Singularity together</li>
+      </ul>
+    </div>
+  </div>
+
+    <h3>Sass for this page:</h3>
+    <pre><code class="language-scss">// Base includes imports, basic config, and global example items
+@import 'base';
+
+$one-col: max-width 599px;
+$less-than-three: max-width 899px;
+$two-col: 600px 899px;
+$three-col: 900px;
+
+@include add-grid(1 1 at 600px);
+@include add-grid(2 4 3 at 900px);
+@include add-gutter(1/8 at 600px);
+@include add-gutter(1/4 at 900px);
+
+.toc {
+  @include clearfix();
+
+  .intro {
+    @include breakpoint($two-col) {
+      @include grid-span(2,1);
+      clear: both;
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(2,1);
+    }
+  }
+
+  .references {
+    @include breakpoint($two-col) {
+      @include grid-span(1,2);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(1,3);
+      clear: right;
+    }
+  }
+
+  .index {
+    @include breakpoint($two-col) {
+      @include grid-span(1,1);
+    }
+    @include breakpoint($three-col) {
+      @include grid-span(2,1);
+      clear: left;
+    }
+
+    a {
+      font-weight: 600;
+      margin-bottom: 1em;
+
+      @include breakpoint($less-than-three) {
+        display: block;
+      }
+    }
+  }
+}
+
+div > ul > li {
+  margin-bottom: 1em;
+}
+
+h4 {
+  @include breakpoint($one-col) {
+    border-top: 1px solid darken($grey-lt, 5%);
+    padding-top: 1em;
+  }
+}
+</code></pre>
+
+  </div>
+  <script src="js/vendor/prism.js"></script>
+  <script src="js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

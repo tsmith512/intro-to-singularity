@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Asymmetric Grids | Introduction to Singularity</title>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6795652/627226/css/fonts.css" />
+  <link rel="stylesheet" href="css/asymmetric.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>
+      <a href="index.html" class="back" title="Index">      Intro to Singularity
+      </a>    </h1>
+    <h2>Asymmetric Grids</h2>
+
+  <h3>Specify Grids as a List:</h3>
+  <p>
+    In addition to the <code class="language-scss">add-grid(X)</code> syntax,
+    grids can also be specified as a list like this,
+    <code class="language-scss">@include add-grid(1 1 1 1)</code>:
+  </p>
+  <div class="container four-column">
+    <div class="item"><div class="caption get-width"></div></div>
+  </div>
+
+  <h3>Asymmetric Grids:</h3>
+  <p>
+    So what if we changed one of those to a 2 like this,
+    <code class="language-scss">@include add-grid(1 2 1 1)</code>?
+  </p>
+  <div class="container asymmetric">
+    <div class="item"><div class="caption get-width"></div></div>
+    <div class="item2"><div class="caption get-width"></div></div>
+  </div>
+
+  <h3>More Examples:</h3>
+
+  <p>
+    This allows grids to be created for a purpose, instead of by creating boxes
+    which are multiples of equal columns. Also,
+    <code class="language-scss">@include grid-span()</code> rules can be added
+    to elements or classes directly within CSS, meaning that no presentational
+    classes littering your markup are required to make these work.
+  </p>
+
+  <p><strong>Example 3:</strong> <code class="language-scss">@include add-grid(2 6)</code></p>
+  <div class="container example-3">
+    <div class="item"><div class="caption">Left Nav</div></div>
+    <div class="item2"><div class="caption">Main Body</div></div>
+  </div>
+
+  <p><strong>Example 4:</strong> <code class="language-scss">@include add-grid(2 4 2)</code></p>
+  <div class="container example-4">
+    <div class="header"><div class="caption">Header</div></div>
+    <div class="item"><div class="caption">Left Nav</div></div>
+    <div class="item2"><div class="caption">Main Body</div></div>
+    <div class="item3"><div class="caption">Right Rail</div></div>
+    <div class="footer"><div class="caption">Footer</div></div>
+  </div>
+
+    <h3>Sass for this page:</h3>
+    <pre><code class="language-scss">// Base includes imports, basic config, and global example items
+@import 'base';
+
+// Define the four column grid using a list
+@include add-grid(1 1 1 1);
+@include add-gutter(1/3);
+
+.four-column {
+  // Add the background grid simulation:
+  @include background-grid($color: $grid-color);
+
+  // First example of a single item:
+  .item { @include grid-span(1,1); }
+}
+
+// The layout() mixin can be used to make a one-time override
+// to the global values created with add-grid().
+@include layout($grid: 1 2 1 1) {
+  .asymmetric {
+    // Add the background grid simulation:
+    @include background-grid($color: $grid-color);
+
+    // A standard first column
+    .item { @include grid-span(1,1); }
+
+    // The second item goes in column 2, which is wider than the others,
+    // but it is still addressed as a single column.
+    .item2 { @include grid-span(1,2); }
+  }
+}
+
+@include layout($grid: 2 6) {
+  .example-3 {
+    // Add the background grid simulation:
+    @include background-grid($color: $grid-color);
+
+    // A standard first column
+    .item { @include grid-span(1,1); }
+    .item2 { @include grid-span(1,2); }
+  }
+}
+
+@include layout($grid: 2 4 2) {
+  .example-4 {
+    // Add the background grid simulation:
+    @include background-grid($color: $grid-color);
+
+    // A standard first column
+    .header { /* For a full-width region, no need to add a grid-span() */ }
+    .item { @include grid-span(1,1); height: 210px; }
+    .item2 { @include grid-span(1,2); }
+    .item3 { @include grid-span(1,3); }
+    .footer { @include grid-span(2,2); clear: right; }
+  }
+}
+</code></pre>
+
+  </div>
+  <script src="js/vendor/prism.js"></script>
+  <script src="js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Twelve Column Examples | Introduction to Singularity</title>
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6795652/627226/css/fonts.css" />
+  <link rel="stylesheet" href="css/twelve.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+  <div class="wrapper">
+    <h1>
+      <a href="index.html" class="back" title="Index">      Intro to Singularity
+      </a>    </h1>
+    <h2>Twelve Column Examples</h2>
+
+  <h3>Basic 12 column grid:</h3>
+  <p>
+    A simple twelve column grid a child item one-column wide.
+  </p>
+  <div class="container twelve-column">
+    <div class="item"><div class="caption get-width"></div></div>
+  </div>
+
+  <p>
+    The same grid, with child items which span multiple columns using
+    <code class="language-scss">grid-span()</code>
+  </p>
+  <div class="container twelve-column">
+    <div class="cyan"><div class="caption get-width"></div></div>
+    <div class="magenta"><div class="caption get-width"></div></div>
+    <div class="yellow"><div class="caption get-width"></div></div>
+    <div class="black"><div class="caption get-width"></div></div>
+  </div>
+  <p>
+    Remember that the background grid is created using CSS3 gradients and is not
+    an exact match for the layout. If the columns and background grid are off,
+    <em>the columns are correct</em> and the grid may not be. Learn more about
+    that at in the
+    <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#visualizing-your-grids">Visualizing your Grids</a>
+    section of Singularity's documentation.
+  </p>
+
+    <h3>Sass for this page:</h3>
+    <pre><code class="language-scss">// Base includes imports, basic config, and global example items
+@import 'base';
+
+// Define the 12 column grid with 1/3 gutters:
+@include add-grid(12);
+@include add-gutter(1/3);
+
+.twelve-column {
+  // Add the background grid simulation:
+  @include background-grid($color: $grid-color);
+
+  // First example of a single item:
+  .item { @include grid-span(1,1); }
+
+  // The spanning examples:
+  .cyan    { @include grid-span(1,1); background: cyan; }
+  .magenta { @include grid-span(2,2); background: magenta; }
+  .yellow  { @include grid-span(3,4); background: yellow; }
+  .black   { @include grid-span(4,7); background: black; }
+
+  // Since the white wasn't easy to read on these:
+  #{nest('.cyan, .magenta, .yellow', '.caption')} {
+    color: $grey-dk;
+  }
+}
+</code></pre>
+
+  </div>
+  <script src="js/vendor/prism.js"></script>
+  <script src="js/vendor/jquery-1.11.1.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
