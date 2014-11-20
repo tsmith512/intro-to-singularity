@@ -1,5 +1,5 @@
     <h3>Sass for this page:</h3>
-    <pre><code class="language-scss"><?php include 'sass/' . $stylesheet . '.scss'; ?></code></pre>
+    <pre><code class="language-scss"><?php include '../sass/' . $stylesheet . '.scss'; ?></code></pre>
 
   </div>
   <script src="js/vendor/prism.js"></script>

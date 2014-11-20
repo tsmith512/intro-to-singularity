@@ -10,7 +10,7 @@
 <body>
   <div class="wrapper">
     <h1>
-      <?php if ($stylesheet !='toc') : ?><a href="index.php" class="back" title="Index"><?php endif; ?>
+      <?php if ($stylesheet !='toc') : ?><a href="index.html" class="back" title="Index"><?php endif; ?>
       Intro to Singularity
       <?php if ($stylesheet !='toc') : ?></a><?php endif; ?>
     </h1>

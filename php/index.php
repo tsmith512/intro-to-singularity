@@ -50,9 +50,9 @@
     <div class="index">
       <h4>Examples</h4>
       <ul>
-        <li><a href="twelve.php">Twelve Column Grid</a> Building and spanning a standard twelve column grid with Singularity</li>
-        <li><a href="asymmetric.php">Asymmetric Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
-        <li><a href="breakpoint.php">Adding Breakpoint</a> Building responsive grid systems with Breakpoint and Singularity together</li>
+        <li><a href="twelve.html">Twelve Column Grid</a> Building and spanning a standard twelve column grid with Singularity</li>
+        <li><a href="asymmetric.html">Asymmetric Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
+        <li><a href="breakpoint.html">Adding Breakpoint</a> Building responsive grid systems with Breakpoint and Singularity together</li>
       </ul>
     </div>
   </div>
