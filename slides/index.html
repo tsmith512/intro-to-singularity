@@ -29,7 +29,7 @@
 
             <h1>Intro to Singularity</h1>
             <p class="large">These slides, references, and examples are on GitHub:<br />
-              <a href="http://tsmith512.github.io/intro-to-singularity">tsmith512.github.io/intro-to-singularity</a></p>
+            <a href="http://tsmith512.github.io/intro-to-singularity">tsmith512.github.io/intro-to-singularity</a></p>
 
         </section>
         <section id="intro" data-state="blackmail">
@@ -54,7 +54,7 @@
         <section>
 
           <h1>Prerequisites</h1>
-          <h2>You're at ATXSass, so I assume you:</h2>
+          <h2>You&rsquo;re at ATXSass, so I assume you:</h2>
           <ul class="two-col">
             <li>Know <a href="http://sass-lang.com">Sass</a> and <a href="http://compass-style.org">Compass</a></li>
             <li>Can get them running on a project with <a href="http://bundler.io">Bundler</a></li>
@@ -81,12 +81,12 @@
               Create your own grid system, just the way you want it.
             </li>
             <li>
-              <strong>Tool won't dictate outcome:</strong> <br />
-              You've probably never <em>really</em> needed 12 columns, you just needed fractions.
+              <strong>Tool won&rsquo;t dictate outcome:</strong> <br />
+              You&rsquo;ve probably never <em>really</em> needed 12 columns, you just needed fractions.
             </li>
             <li>
               <strong>Free of presentational classes:</strong> <br />
-              Because <code>.push-3</code>, <code>.col-md-6</code>, or <code>.large-8</code> don't mean anything; it's litter.
+              Because <code>.push-3</code>, <code>.col-md-6</code>, or <code>.large-8</code> don&rsquo;t mean anything; it&rsquo;s litter.
             </li>
             <li>
               <strong>Allow different types of grids:</strong> <br />
@@ -104,7 +104,7 @@
             </li>
             <li>
               <strong>Example case:</strong> <br />
-              <a href="../resume.html" target="_blank">Aunt Flossie's R&eacute;sum&eacute;</a>
+              <a href="../resume.html" target="_blank">Aunt Flossie&rsquo;s R&eacute;sum&eacute;</a>
             </li>
           </ul>
 
@@ -175,8 +175,8 @@
         </section>
         <section>
 
-          <h1>That's all, folks!</h1>
-          <h2>Twitter Bootstrap's Grid</h2>
+          <h1>That&rsquo;s all, folks!</h1>
+          <h2>Twitter Bootstrap&rsquo;s Grid</h2>
 
 <pre><code class="language-scss">@include add-grid(12);
 @include add-gutter(1/3);</code></pre>
@@ -224,7 +224,7 @@
           <img src="gfx/symmetric-animation.gif" alt="Changing the argument in add-grid() changes the number of columns" />
 
           <p class="small">
-            Couldn't do tenths, sevenths, or fifths before, now could ya?
+            Couldn&rsquo;t do tenths, sevenths, or fifths before, now could ya?
           </p>
         </section>
         <section>
@@ -250,7 +250,7 @@
 
           <h1>add-grid() can take a list instead</h1>
 
-          <p>You've seen a single integer:</p>
+          <p>You&rsquo;ve seen a single integer:</p>
 
 <pre><code class="language-scss">  @include add-grid(4); // 4 equal columns</code></pre>
 
@@ -303,7 +303,7 @@
           <h1>A New (Old) Thought Process</h1>
 
           <p class="large">
-            It's not about first, second, ... twelfth column. It's about:
+            It&rsquo;s not about first, second, ... twelfth column. It&rsquo;s about:
           </p>
 
           <ul class="two-col bold">
@@ -328,7 +328,7 @@
         <section>
 
           <h1>Create Grids for your Content</h1>
-          <h2>Don't cram them into prefab fractions</h2>
+          <h2>Don&rsquo;t cram them into prefab fractions</h2>
 
 <pre><code class="language-scss">  // Not real code:
   @include add-grid( LeftNav BodyArea RightRail );
@@ -359,7 +359,7 @@
             </div>
             <div>
               <h2>Meet Aunt Flossie</h2>
-              <p>She's a Pit Boss in Vegas.</p>
+              <p>She&rsquo;s a Pit Boss in Vegas.</p>
             </div>
           </div>
 
@@ -378,7 +378,7 @@
                 grid-centric than a r&eacute;sum&eacute;?
               </p>
               <p class="bold">
-                So let's build one.
+                So let&rsquo;s build one.
               </p>
             </div>
           </div>
@@ -407,7 +407,7 @@
         <section>
 
           <h1>Susy Grids users</h1>
-          <h2>probably think they've got this figured out&hellip;</h2>
+          <h2>probably think they&rsquo;ve got this figured out&hellip;</h2>
 
           <ul class="two-col">
             <li>
@@ -488,7 +488,7 @@ h2 {
 }</code></pre>
 
           <p class="small">
-            <strong>*</strong> It's still (1,1), but it's a new context.
+            <strong>*</strong> It&rsquo;s still (1,1), but it&rsquo;s a new context.
           </p>
 
         </section>
@@ -497,7 +497,7 @@ h2 {
           <h1>¡Ojo!</h1>
 
           <p class="large">
-            Just having multiple grids defined isn't enough. <br />
+            Just having multiple grids defined isn&rsquo;t enough. <br />
             You need to call <code class="language-scss">@include grid-span()</code>
             inside a <code class="language-scss">@include breakpoint()</code> to
             trigger the new layout.
@@ -512,7 +512,7 @@ h2 {
 
           <p class="small">
             <a href="http://sassmeister.com/gist/ac403a192cd831e977ab" target="_blank">Example on SassMeister</a> |
-            Singularity's <a href="https://github.com/at-import/Singularity/wiki/Output-Styles#isolation">Isolation output style</a> (default) lets you do this.
+            Singularity&rsquo;s <a href="https://github.com/at-import/Singularity/wiki/Output-Styles#isolation">Isolation output style</a> (default) lets you do this.
           </p>
 
         </section>
@@ -529,7 +529,7 @@ h2 {
         </section>
         <section>
 
-          <h1>That's how we did this</h1>
+          <h1>That&rsquo;s how we did this</h1>
           <h2>Combine multiple grids, breakpoints, and visual re-ordering.</h2>
 
           <img src="gfx/visual-order-change-resume.gif" alt="Visual Order != Source Order" />
@@ -574,14 +574,14 @@ h2 {
 
           <ul class="two-col">
             <li>A new kind of grid system which lets you write grids to <em>your</em> content.</li>
-            <li>Columns can be equal width ("Symmetric") or varied in width ("Asymmetric").</li>
+            <li>Columns can be equal width (&ldquo;Symmetric&rdquo;) or varied in width (&ldquo;Asymmetric&rdquo;).</li>
           </ul>
 
           <h2>Singularity plays nicely with Breakpoint so that:</h2>
 
           <ul class="two-col">
             <li>You can have different column layouts at different sizes.</li>
-            <li>Your "visual" order doesn't have to match your "source" order.</li>
+            <li>Your &ldquo;visual&rdquo; order doesn&rsquo;t have to match your &ldquo;source&rdquo; order.</li>
           </ul>
 
         </section>
