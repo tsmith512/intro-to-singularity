@@ -1,0 +1,614 @@
+@charset "UTF-8";
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+  background: #E9E9E9;
+  background-color: #E9E9E9;
+}
+
+.reveal {
+  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  letter-spacing: -0.02em;
+  color: #424242;
+}
+
+::selection {
+  color: #fff;
+  background: #FF9900;
+  text-shadow: none;
+}
+
+/*********************************************
+ * HEADERS
+ *********************************************/
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  margin: 0 0 16px 0;
+  color: #006DAF;
+  font-family: "Tungsten Narrow A", "Tungsten Narrow B", sans-serif;
+  line-height: 0.9em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.75);
+}
+
+.reveal h1 {
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+  color: #006DAF;
+  text-decoration: none;
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  -ms-transition: color .15s ease;
+  -o-transition: color .15s ease;
+  transition: color .15s ease;
+}
+
+.reveal a:not(.image):hover {
+  color: #16a7ff;
+  text-shadow: none;
+  border: none;
+}
+
+.reveal .roll span:after {
+  color: #fff;
+  background: #003d62;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #424242;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #006DAF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #006DAF;
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #006DAF;
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #006DAF;
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #006DAF;
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #16a7ff;
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #16a7ff;
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #16a7ff;
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #16a7ff;
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+  background: #006DAF;
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -ms-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
+
+/*********************************************
+ * SLIDE NUMBER
+ *********************************************/
+.reveal .slide-number {
+  color: #006DAF;
+}
+
+/* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+css-extras+scss&plugins=line-highlight+line-numbers */
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  position: relative;
+  margin: .5em auto;
+  -webkit-box-shadow: -1px 0px 0px 0px #006DAF, 0px 0px 0px 1px #dfdfdf;
+  -moz-box-shadow: -1px 0px 0px 0px #006DAF, 0px 0px 0px 1px #dfdfdf;
+  box-shadow: -1px 0px 0px 0px #006DAF, 0px 0px 0px 1px #dfdfdf;
+  border-left: 10px solid #006DAF;
+  background-color: #fdfdfd;
+  background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-size: 3em 3em;
+  background-origin: content-box;
+  overflow: visible;
+}
+
+code[class*="language"] {
+  height: 100%;
+  padding: 0 1em;
+  display: block;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  position: relative;
+  padding: .2em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  color: #c92c2c;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7D8B99;
+}
+
+.token.punctuation {
+  color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+  color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+  color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+  pre[class*="language-"]:before,
+  pre[class*="language-"]:after {
+    bottom: 14px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: #e0d7d1;
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*="language-"].line-numbers {
+  padding-left: 0;
+}
+
+pre[class*="language-"].line-numbers code {
+  padding-left: 3.8em;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+  left: 0;
+}
+
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prism’s padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+  position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+.reveal ul.two-col, .reveal .columns {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-box-align: stretch;
+  -moz-box-align: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.reveal ul.two-col > *, .reveal .columns > * {
+  width: 50%;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+#flossie .columns, #her-resume .columns {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.reveal :not(pre) > code[class*="language-"] {
+  display: inline;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  vertical-align: inherit;
+  line-height: inherit;
+}
+.reveal h1 {
+  font-weight: 600;
+}
+.reveal h1 a {
+  color: #008de2 !important;
+}
+.reveal h1 a:hover {
+  text-decoration: underline !important;
+}
+.reveal h2 {
+  text-transform: none;
+  color: #7f7f7f;
+}
+.reveal p {
+  margin: 1em 0;
+}
+.reveal p.large {
+  border-bottom: 1px solid #bbb;
+  border-top: 1px solid #fff;
+  padding: 0.5em 0;
+  font-size: 36px;
+  font-weight: 700;
+  position: relative;
+}
+.reveal p.large:before, .reveal p.large:after {
+  position: absolute;
+  left: 0;
+  right: 0;
+  content: " ";
+  font-size: 0;
+}
+.reveal p.large:before {
+  top: -2px;
+  border-top: 1px solid #bbb;
+}
+.reveal p.large:after {
+  bottom: -2px;
+  border-bottom: 1px solid #fff;
+}
+.reveal p.small {
+  border-style: dotted;
+  border-color: #bbb;
+  border-width: 1px 0;
+  padding: 1em 0;
+  font-size: 24px;
+  font-style: italic;
+}
+.reveal p.citation {
+  margin-top: 0;
+  font-size: 18px;
+  font-style: italic;
+}
+.reveal a[target="_blank"]:after {
+  display: inline-block;
+  vertical-align: middle;
+  content: " ";
+  width: 1em;
+  margin-left: 0.5em;
+  height: 1em;
+  background-image: url("../slides/gfx/new-window.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+.reveal ul li {
+  margin-bottom: 0.5em !important;
+}
+.reveal ul.two-col {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+}
+.reveal ul.two-col li {
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1em;
+  margin-bottom: 0;
+}
+.reveal .bold {
+  font-weight: 600;
+}
+.reveal pre {
+  font-size: 0.75em;
+}
+
+.blackmail body {
+  background-image: url("../slides/gfx/blackmail.jpg");
+  background-size: contain;
+  background-position: left center;
+  background-color: white;
+  background-repeat: no-repeat;
+}
+.blackmail body section.present {
+  right: 0;
+  text-align: right;
+}
+
+#goals .two-col li {
+  padding-top: 0;
+}
+
+.ojo body {
+  background-color: #8C0005;
+}
+.ojo body section.present h1, .ojo body section.present p {
+  color: #FCF7D1 !important;
+}
+.ojo body section.present p {
+  background-color: #111111;
+  padding-left: 2em;
+  padding-right: 2em;
+  border-top: 8px solid #B52C00;
+  border-bottom: 8px solid #B52C00;
+}
+.ojo body section.present p:before, .ojo body section.present p:after {
+  display: none;
+}
+
+.idea body {
+  background-color: #4180AB;
+}
+.idea body section.present h1 {
+  color: #FFFFFF;
+}
+.idea body section.present a {
+  color: white;
+}
+.idea body section.present p {
+  color: #E4EBF0;
+  padding: 2em;
+  border-top: 8px solid #8AB3CF;
+  border-bottom: 8px solid #8AB3CF;
+}
+.idea body section.present p:before, .idea body section.present p:after {
+  display: none;
+}
+
+.theatre body {
+  background-color: #222;
+}
+.theatre body section.present h1, .theatre body section.present h2, .theatre body section.present p {
+  color: #ddd;
+}
+.theatre body section.present a {
+  color: white;
+}
+.theatre body section.present img {
+  -moz-box-shadow: 0 0 50px black;
+  -webkit-box-shadow: 0 0 50px black;
+  box-shadow: 0 0 50px black;
+}

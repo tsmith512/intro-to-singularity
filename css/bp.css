@@ -1,0 +1,578 @@
+@charset "UTF-8";
+/* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Whitney SSm A", "Whitney SSm B", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.375;
+  background-color: #E9E9E9;
+  color: #424242;
+}
+
+.wrapper {
+  max-width: 1200px;
+  width: 96%;
+  margin: 2em auto;
+  border-top: 4px solid #006DAF;
+  border-bottom: 4px solid #006DAF;
+  padding: 2em 1em;
+  background-color: white;
+  -moz-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.25);
+}
+.wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.15;
+}
+
+h1, h2 {
+  font-family: "Tungsten Narrow A", "Tungsten Narrow B", sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: #292929;
+}
+
+h3, h4, h5, h6 {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin: 1em 0;
+}
+
+h4, h5, h6 {
+  color: #5c5c5c;
+}
+
+h1 {
+  font-size: 3.5em;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.75em;
+}
+
+h4 {
+  font-size: 1.375em;
+}
+
+h5 {
+  font-size: 1.125em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  margin: 1em 0;
+  max-width: 60em;
+}
+
+strong, b {
+  font-weight: 600;
+}
+
+a {
+  color: #006DAF;
+  text-decoration: none;
+}
+a:hover, a:active {
+  text-decoration: underline;
+}
+h1 a:hover {
+  text-decoration: none;
+}
+
+.caption {
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-family: "Tungsten Narrow A", "Tungsten Narrow B", sans-serif;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  color: #E9E9E9;
+}
+
+/* http://prismjs.com/download.html?themes=prism-coy&languages=markup+css+css-extras+scss&plugins=line-highlight+line-numbers */
+/**
+ * prism.js Coy theme for JavaScript, CoffeeScript, CSS and HTML
+ * Based on https://github.com/tshedor/workshop-wp-theme (Example: http://workshop.kansan.com/category/sessions/basics or http://workshop.timshedor.com/category/sessions/basics);
+ * @author Tim  Shedor
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: black;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  position: relative;
+  margin: .5em auto;
+  -webkit-box-shadow: -1px 0px 0px 0px #006DAF, 0px 0px 0px 1px #dfdfdf;
+  -moz-box-shadow: -1px 0px 0px 0px #006DAF, 0px 0px 0px 1px #dfdfdf;
+  box-shadow: -1px 0px 0px 0px #006DAF, 0px 0px 0px 1px #dfdfdf;
+  border-left: 10px solid #006DAF;
+  background-color: #fdfdfd;
+  background-image: -webkit-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -moz-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -ms-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: -o-linear-gradient(transparent 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-image: linear-gradient(rgba(0, 0, 0, 0) 50%, rgba(69, 142, 209, 0.04) 50%);
+  background-size: 3em 3em;
+  background-origin: content-box;
+  overflow: visible;
+}
+
+code[class*="language"] {
+  height: 100%;
+  padding: 0 1em;
+  display: block;
+  overflow: auto;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  position: relative;
+  padding: .2em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  -ms-border-radius: 0.3em;
+  -o-border-radius: 0.3em;
+  border-radius: 0.3em;
+  color: #c92c2c;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #7D8B99;
+}
+
+.token.punctuation {
+  color: #5F6364;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: #c92c2c;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+  color: #2f9c0a;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+  color: #1990b8;
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.token.important {
+  font-weight: normal;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.namespace {
+  opacity: .7;
+}
+
+@media screen and (max-width: 767px) {
+  pre[class*="language-"]:before,
+  pre[class*="language-"]:after {
+    bottom: 14px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+/* Plugin styles */
+.token.tab:not(:empty):before,
+.token.cr:before,
+.token.lf:before {
+  color: #e0d7d1;
+}
+
+/* Plugin styles: Line Numbers */
+pre[class*="language-"].line-numbers {
+  padding-left: 0;
+}
+
+pre[class*="language-"].line-numbers code {
+  padding-left: 3.8em;
+}
+
+pre[class*="language-"].line-numbers .line-numbers-rows {
+  left: 0;
+}
+
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  /* Same as .prism’s padding-top */
+  background: rgba(153, 122, 102, 0.08);
+  background: -moz-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -webkit-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: -o-linear-gradient(left, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  background: linear-gradient(to right, rgba(153, 122, 102, 0.1) 70%, rgba(153, 122, 102, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+.line-highlight:before,
+.line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: rgba(153, 122, 102, 0.4);
+  color: #f5f2f0;
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+.line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+  position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+.container {
+  min-height: 100px;
+  border: 1px solid #757575;
+}
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container > div {
+  position: relative;
+  height: 100px;
+  margin-bottom: 10px;
+  background: #006DAF;
+}
+
+.example-1 {
+  background-image: linear-gradient(to right, #BCBCBC 0%, #BCBCBC 47.05882%, #cccccc 47.05882%, #cccccc 52.94118%, #BCBCBC 52.94118%, #BCBCBC);
+}
+@media (min-width: 900px) {
+  .example-1 {
+    background-image: linear-gradient(to right, #BCBCBC 0%, #BCBCBC 21.05263%, #cccccc 21.05263%, #cccccc 23.68421%, #BCBCBC 23.68421%, #BCBCBC 65.78947%, #cccccc 65.78947%, #cccccc 68.42105%, #BCBCBC 68.42105%, #BCBCBC);
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .example-1 .left {
+    -sgs-span-settings: ("span": 1, "location": 1, "grid": 1 1, "gutter": 0.125, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 47.05882%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+    clear: both;
+  }
+}
+@media (min-width: 900px) {
+  .example-1 .left {
+    -sgs-span-settings: ("span": 1, "location": 1, "grid": 2 4 3, "gutter": 0.25, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 21.05263%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .example-1 .center {
+    -sgs-span-settings: ("span": 2, "location": 1, "grid": 1 1, "gutter": 0.125, "style": "opposite", "start row": true, "end row": true, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 100%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 900px) {
+  .example-1 .center {
+    -sgs-span-settings: ("span": 1, "location": 2, "grid": 2 4 3, "gutter": 0.25, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 42.10526%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 23.68421%;
+    clear: none;
+  }
+}
+@media (min-width: 600px) and (max-width: 899px) {
+  .example-1 .right {
+    -sgs-span-settings: ("span": 1, "location": 2, "grid": 1 1, "gutter": 0.125, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 47.05882%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 900px) {
+  .example-1 .right {
+    -sgs-span-settings: ("span": 1, "location": 3, "grid": 2 4 3, "gutter": 0.25, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 31.57895%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+
+.example-2 {
+  background-image: linear-gradient(to right, #BCBCBC 0%, #BCBCBC 22.85714%, #cccccc 22.85714%, #cccccc 25.71429%, #BCBCBC 25.71429%, #BCBCBC 48.57143%, #cccccc 48.57143%, #cccccc 51.42857%, #BCBCBC 51.42857%, #BCBCBC 74.28571%, #cccccc 74.28571%, #cccccc 77.14286%, #BCBCBC 77.14286%, #BCBCBC);
+}
+@media (min-width: 900px) {
+  .example-2 {
+    background-image: linear-gradient(to right, #BCBCBC 0%, #BCBCBC 18.60465%, #cccccc 18.60465%, #cccccc 20.93023%, #BCBCBC 20.93023%, #BCBCBC 58.13953%, #cccccc 58.13953%, #cccccc 60.46512%, #BCBCBC 60.46512%, #BCBCBC 88.37209%, #cccccc 88.37209%, #cccccc 90.69767%, #BCBCBC 90.69767%, #BCBCBC);
+  }
+}
+.example-2 .item1 {
+  -sgs-span-settings: ("span": 1, "location": 1, "grid": 4, "gutter": 0.125, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+  width: 22.85714%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+@media (min-width: 1000px) {
+  .example-2 .item1 {
+    -sgs-span-settings: ("span": 1, "location": 1, "grid": 2 4 3 1, "gutter": 0.25, "style": "opposite", "start row": true, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 18.60465%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+}
+.example-2 .item2 {
+  -sgs-span-settings: ("span": 1, "location": 2, "grid": 4, "gutter": 0.125, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+  width: 22.85714%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 25.71429%;
+  clear: none;
+}
+@media (min-width: 1000px) {
+  .example-2 .item2 {
+    -sgs-span-settings: ("span": 1, "location": 2, "grid": 2 4 3 1, "gutter": 0.25, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 37.2093%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 20.93023%;
+    clear: none;
+  }
+}
+.example-2 .item3 {
+  -sgs-span-settings: ("span": 1, "location": 3, "grid": 4, "gutter": 0.125, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+  width: 22.85714%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 51.42857%;
+  clear: none;
+}
+@media (min-width: 1000px) {
+  .example-2 .item3 {
+    -sgs-span-settings: ("span": 1, "location": 3, "grid": 2 4 3 1, "gutter": 0.25, "style": "opposite", "start row": false, "end row": false, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 27.90698%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 60.46512%;
+    clear: none;
+  }
+}
+.example-2 .item4 {
+  -sgs-span-settings: ("span": 1, "location": 4, "grid": 4, "gutter": 0.125, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+  width: 22.85714%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
+}
+@media (min-width: 1000px) {
+  .example-2 .item4 {
+    -sgs-span-settings: ("span": 1, "location": 4, "grid": 2 4 3 1, "gutter": 0.25, "style": "opposite", "start row": false, "end row": true, "fixed gutter": false, "split gutter": null, "gutter property": "margin", "options": ((null: null)));
+    width: 9.30233%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
