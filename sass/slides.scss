@@ -1,5 +1,6 @@
 @import '../js/vendor/reveal/css/theme/template/mixins.scss';
 @import '../js/vendor/reveal/css/theme/template/settings.scss';
+@import "compass";
 @import 'variables';
 
 // Base settings for all themes that can optionally be
@@ -93,6 +94,15 @@ $selectionColor: #fff;
 // My overrides:
 .reveal {
 
+  :not(pre) > code[class*="language-"] {
+    display: inline;
+    @include border-radius(0);
+    border: none;
+    padding: 0;
+    vertical-align: inherit;
+    line-height: inherit;
+  }
+
   h1 {
     font-weight: 600;
 
@@ -153,6 +163,22 @@ $selectionColor: #fff;
     font-style: italic;
   }
 
+  a[target="_blank"]:after {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    width: 1em;
+    margin-left: 0.5em;
+    height: 1em;
+    background: {
+      image: url('../slides/gfx/new-window.svg');
+      size: contain;
+      repeat: no-repeat;
+      position: center center;
+    }
+    @include opacity(0.5);
+  }
+
   ul li {
     margin-bottom: 0.5em !important;
   }
@@ -197,12 +223,12 @@ $selectionColor: #fff;
     repeat: no-repeat;
   }
 
+  section.present {
+    right: 0;
+    text-align: right;
+  }
 }
 
-#intro {
-  right: 0;
-  text-align: right;
-}
 
 #goals {
   .two-col li {
@@ -213,5 +239,73 @@ $selectionColor: #fff;
 #flossie, #her-resume {
   .columns {
     @extend %flex-two-col-mid;
+  }
+}
+
+.ojo body {
+  background-color: #8C0005;
+
+  section.present {
+    h1, p {
+      color: #FCF7D1 !important;
+    }
+
+    p {
+      background-color: #111111;
+      padding-left: 2em;
+      padding-right: 2em;
+      border-top: 8px solid #B52C00;
+      border-bottom: 8px solid #B52C00;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+
+.idea body {
+  background-color: #4180AB;
+
+  section.present {
+
+    h1 {
+      color: #FFFFFF;
+    }
+
+    a {
+      color: white;
+    }
+
+    p {
+      // background-color: darken(#4180AB, 10%);
+      color: #E4EBF0;
+      padding: 2em;
+      border-top: 8px solid #8AB3CF;
+      border-bottom: 8px solid #8AB3CF;
+
+      &:before, &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.theatre body {
+  background-color: #222;
+
+  section.present {
+    h1, h2, p {
+      color: #ddd;
+    }
+
+    a {
+      color: white;
+    }
+
+    img {
+      @include box-shadow(0 0 50px rgba(0,0,0,1));
+    }
   }
 }

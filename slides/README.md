@@ -1,10 +1,5 @@
 # Session Description
 
-Singularity lets you toss out your old, stodgy grid system and create a system
-of columns and gutters that actually works with your content, allowing different
-layouts at different breakpoints, a visual order that isn't tied to your source
-order, and no more terrible class names.
-
 # Introduction to Singularity Grids
 
 ## You Probably Already Know
@@ -60,25 +55,8 @@ order, and no more terrible class names.
 
 # Look Closer
 
-> Animation of the resume which shows the change in visual order from source order
-
-# Yeah this part isn't finished yet.
-
 --------------------------------------------------------------------------------
 
 # Tellin' em' what ya told 'em:
 
-- Singularity is a new kind of grid system which lets you write grids to your
-  content, not a convenient least-common-multiple.
-- Columns can be equal width "Symmetric" or varied in width "Asymmetric".
-- Singularity plays nicely with Breakpoint so that:
-  - You can have different column layouts at different sizes.
-  - Your "visual" order doesn't have to match your "source" order.
-
 # Thank You
-
-Taylor Smith  
-tsmith512 on Twitter, LinkedIn, GitHub, Facebook  
-Designer / Frontend Dev at Four Kitchens
-
-_These slides and example materials are all on the Internet._

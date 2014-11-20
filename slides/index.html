@@ -33,7 +33,6 @@
         </section>
         <section id="intro" data-state="blackmail">
 
-          <!-- <div class="columns"> -->
             <h1>
               Taylor Smith
             </h1>
@@ -49,7 +48,6 @@
               <a href="https://behance.net/tsmith512">Behance</a>,
               <a href="https://facebook.com/tsmith512">Facebook</a>
             </p>
-          <!-- </div> -->
 
         </section>
         <section>
@@ -105,19 +103,14 @@
             </li>
             <li>
               <strong>Example case:</strong> <br />
-              Aunt Flossie's R&eacute;sum&eacute;
-            </li>
-            <li>
-              <strong>More info:</strong> <br />
-              Additional Resources and Examples
+              <a href="../resume.html" target="_blank">Aunt Flossie's R&eacute;sum&eacute;</a>
             </li>
           </ul>
 
         </section>
         <section>
 
-          <h1>Introduction</h1>
-          <h2>Airplane presentation: high &amp; fast</h2>
+          <h1>Tonight will be High Level and Fast</h1>
           <p class="large">
             Singularity is immensely flexible. There are things I cannot cover
             today. Play with it, read the docs, experiment, ask for help.
@@ -134,7 +127,7 @@
 
           <img src="gfx/960_logo.png" alt="960 Grid System logo" />
 
-          <p class="small"><a href="https://www.google.com/search?q=css%2012%20column%20grid">Others Include:</a> Bootstrap, Foundation, Responsive Grid System, 1140px, Skeleton, Gridinator, Metro UI CSS, Columnal, Aeon, Gridicolous&hellip;</p>
+          <p class="small"><a href="https://www.google.com/search?q=css%2012%20column%20grid">Others Include:</a> Bootstrap, Foundation, YUI Grids&hellip;</p>
 
         </section>
         <section>
@@ -155,7 +148,7 @@
           <p><em>(If you did, have you considered <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/">Flexbox</a>?)</em></p>
 
         </section>
-        <section>
+        <section data-state="idea">
 
           <h1>What is Singularity?</h1>
 
@@ -209,12 +202,12 @@
 </code></pre>
 
           <p class="small">
-            <a href="../twelve.php" target="_blank">See example file.</a> |
+            <a href="../twelve.php" target="_blank">See example file</a> |
             <a href="http://sassmeister.com/gist/520885a8605b7788c687" target="_blank">Play on SassMeister</a>
           </p>
 
         </section>
-        <section>
+        <section data-state="theatre">
 
           <h1>No More Terrible Class Names!</h1>
 
@@ -243,11 +236,12 @@
         </section>
       </section>
       <section>
-        <section>
+        <section data-state="idea">
 
           <h1>Another Way</h1>
           <p class="large">
-            Singularity has two basic ways to specify the number of columns.
+            Singularity has two basic ways<br />
+            to specify the number of columns.
           </p>
 
         </section>
@@ -276,7 +270,7 @@
           <img src="gfx/asymmetric-animation.gif" alt="Changing the argument in add-grid() can increase the relative width of a column" />
 
         </section>
-        <section>
+        <section data-state="theatre">
 
           <h1>Woah</h1>
           <img src="gfx/woah.gif" alt="Woah" />
@@ -354,7 +348,7 @@
         </section>
       </section>
       <section>
-        <section id="flossie">
+        <section id="flossie" data-state="theatre">
 
           <h1>An Example</h1>
 
@@ -454,6 +448,10 @@
 @include add-gutter(1/8);
 @include add-gutter(1/4 at 850px);</code></pre>
             </div>
+
+            <p class="small">
+              <a href="../breakpoint.php" target="_blank">See example file</a>
+            </p>
           </div>
 
         </section>
@@ -465,13 +463,15 @@
           <video data-autoplay loop src="gfx/resume-expanding-grid.mp4" width="640" height="360"></video>
 
         </section>
-        <section>
+        <section data-state="theatre">
 
           <h1>You know kung fu.</h1>
 
           <img src="gfx/kungfu.gif" alt="Neo motioning" style="width:800px;height:auto;"/>
 
         </section>
+      </section>
+      <section>
         <section>
 
           <h1>And this was designed to work with <a href="http://breakpoint-sass.com/">Breakpoint</a></h1>
@@ -491,19 +491,117 @@ h2 {
           </p>
 
         </section>
-        <section>
+        <section data-state="ojo">
 
           <h1>¡Ojo!</h1>
 
           <p class="large">
-            <em>Note:</em> just having multiple grids defined isn't enough. You
-            need to call <code class="language-scss">@include grid-span()</code>
+            Just having multiple grids defined isn't enough. <br />
+            You need to call <code class="language-scss">@include grid-span()</code>
             inside a <code class="language-scss">@include breakpoint()</code> to
             trigger the new layout.
           </p>
 
         </section>
+        <section>
 
+          <h1>Did you notice the order?</h1>
+
+          <img src="gfx/visual-order-change.gif" alt="Visual Order != Source Order" />
+
+          <p class="small">
+            <a href="http://sassmeister.com/gist/ac403a192cd831e977ab" target="_blank">Example on SassMeister</a> |
+            Singularity's <a href="https://github.com/at-import/Singularity/wiki/Output-Styles#isolation">Isolation output style</a> (default) lets you do this.
+          </p>
+
+        </section>
+        <section data-state="idea">
+
+          <h1>Source Order &ne; Visual Order</h1>
+
+          <p class="large">
+            Just change the <code>add-grid()</code> arguments to re-order any
+            elements within a single row. Get clever with your
+            <code>clear:x;</code> statements for even more flexibility.
+          </p>
+
+        </section>
+        <section>
+
+          <h1>That's how we did this</h1>
+          <h2>Combine multiple grids, breakpoints, and visual re-ordering.</h2>
+
+          <img src="gfx/visual-order-change-resume.gif" alt="Visual Order != Source Order" />
+
+          <p class="small">
+            <strong>Hint:</strong> watch the date (source-first) and the city (source-last).
+          </p>
+
+        </section>
+        <section>
+
+          <h1>Also this</h1>
+
+          <img src="gfx/visual-order-change-resume-header.gif" alt="Visual Order != Source Order" />
+
+          <p class="small">
+            <strong>Hint:</strong> watch the portrait.
+          </p>
+
+        </section>
+        <section data-state="theatre">
+
+          <h1>Powerful relief</h1>
+
+          <img src="gfx/aah.gif" alt="" />
+
+        </section>
+        <section data-state="idea">
+
+          <h1>Check it out</h1>
+
+          <p class="large">
+            <a href="../resume.html" target="_blank">Aunt Flossie</a>
+          </p>
+        </section>
+      </section>
+      <section>
+        <section id="closing">
+
+          <h1>Wrapping Up</h1>
+          <h2>Singularity is:</h2>
+
+          <ul class="two-col">
+            <li>A new kind of grid system which lets you write grids to <em>your</em> content.</li>
+            <li>Columns can be equal width ("Symmetric") or varied in width ("Asymmetric").</li>
+          </ul>
+
+          <h2>Singularity plays nicely with Breakpoint so that:</h2>
+
+          <ul class="two-col">
+            <li>You can have different column layouts at different sizes.</li>
+            <li>Your "visual" order doesn't have to match your "source" order.</li>
+          </ul>
+
+        </section>
+        <section data-state="blackmail">
+
+          <h1>Thank You</h1>
+
+          <h2>Slides and Examples on Github:<a href=""></a></h2>
+
+          <p>
+            <strong>tsmith512</strong> is on
+            <a href="https://github.com/tsmith512">Github</a>,
+            <a href="https://twitter.com/tsmith512">Twitter</a>,
+            <br />
+            <a href="https://linkedin.com/in/tsmith512">LinkedIn</a>,
+            <a href="https://behance.net/tsmith512">Behance</a>,
+            <a href="https://facebook.com/tsmith512">Facebook</a> and is <br />
+            <strong>sometimes seen at <a href="http://www.fourkitchens.com">Four Kitchens</a>.</strong>
+          </p>
+
+        </section>
       </section>
     </div>
   </div>
