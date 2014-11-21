@@ -545,24 +545,6 @@ pre.line-numbers > code {
 .reveal pre {
   font-size: 0.75em;
 }
-.reveal .hiring {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5em;
-}
-.reveal .hiring a {
-  color: #CC3300;
-}
-.reveal .hiring a:before {
-  content: " ";
-  vertical-align: baseline;
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  background-image: url("../slides/gfx/arrow-up.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
 
 .blackmail body {
   background-image: url("../slides/gfx/blackmail.jpg");
