@@ -65,6 +65,12 @@
         <li><a href="asymmetric.html">Asymmetric Grids</a> Building columns of varied width which focus on your content instead of prefabricated fractions</li>
         <li><a href="breakpoint.html">Adding Breakpoint</a> Building responsive grid systems with Breakpoint and Singularity together</li>
       </ul>
+      <h4>Snippets to fiddle with on SassMeister</h4>
+      <ul>
+        <li><a href="http://sassmeister.com/gist/520885a8605b7788c687">Simple twelve column grid</a></li>
+        <li><a href="http://sassmeister.com/gist/419d8416616fbf6bd99f">Example of the Calc output style for a fixed-width column</a></li>
+        <li><a href="http://sassmeister.com/gist/ac403a192cd831e977ab">Change the visual order without changing the source order</a></li>
+      </ul>
     </div>
   </div>
 
