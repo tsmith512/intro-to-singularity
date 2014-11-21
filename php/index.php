@@ -44,6 +44,7 @@
         <li><h5>Documentation</h5>
           <ul>
             <li>Paul Irish: <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/">* { Box-sizing: Border-box } FTW</a></li>
+            <li>John Albin Wilkins: <a href="http://palantir.net/blog/responsive-design-s-dirty-little-secret">Responsive Design’s Dirty Little Secret</a> (or, "How exactly does Singularity's <em>Isolation</em> work, and why?")</li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids">Symmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids">Asymmetric Grids</a></li>
             <li>Singularity: <a href="https://github.com/at-import/Singularity/wiki/Output-Styles">Output Styles: Float vs. Isolation</a></li>
