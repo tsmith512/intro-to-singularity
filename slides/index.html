@@ -180,7 +180,9 @@
 
 <pre><code class="language-scss">@include add-grid(12);
 @include add-gutter(1/3);
-// ^^ Include once in a config partial or at the top of a Sass file above styles</code></pre>
+// ^^ Include once in a config partial or at the top of a Sass file above styles
+.container { @include clearfix; }
+// ^^ Just clearfix your container, no need to add more grid calls</code></pre>
 
           <img src="gfx/bootstrap.png" alt="Bootstrap's Grid" />
 
