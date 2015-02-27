@@ -122,9 +122,46 @@
       </section>
 
       <section>
+        <section id="box-model-review">
+          <h1>Review: The Box Model</h1>
+          <h2>Box Sizing</h2>
+
+          <img src="gfx/box-sizing.png" alt="Box Model" width="650" height="500" style="border:0; box-shadow: none" />
+
+        </section>
+        <section id="box-model-content-box">
+          <h1>Content Box</h1>
+          <h2>Has this ever happened to you?</h2>
+
+          <img src="gfx/content-box.png" alt="Content Box" width="650" height="500" style="border:0; box-shadow: none" />
+        </section>
+        <section id="box-model-border-box">
+          <h1>Border Box</h1>
+          <h2>Is this what you wanted?</h2>
+
+          <img src="gfx/border-box.png" alt="Border Box" width="650" height="500" style="border:0; box-shadow: none" />
+        </section>
+        <section data-state="ojo" id="border-box-reqd">
+          <h1>&iexcl;Ojo!</h1>
+          <p class="large">
+            Singularity requires <code class="language-css">box-sizing: border-box;</code>
+          </p>
+
+              <pre class="small"><code class="language-scss">// SCSS:
+*, *:before, *:after {
+  @include box-sizing('border-box');
+}
+
+/* Compiled CSS */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}</code></pre>
+        </section>
         <section id="getting-started">
 
-          <h1>What was 960?</h1>
+          <h1>Review: What was 960?</h1>
           <h2>Just a twelve column grid</h2>
 
           <img src="gfx/960_logo.png" alt="960 Grid System logo" />
