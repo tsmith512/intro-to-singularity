@@ -210,6 +210,25 @@ $selectionColor: #fff;
   pre {
     font-size: 0.75em;
   }
+
+  .hiring {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.5em;
+    a { color: #CC3300; }
+    a:before {
+      content: " ";
+      vertical-align: baseline;
+      display: inline-block;
+      height: 1em;
+      width: 1em;
+      background: {
+        image: url('../slides/gfx/arrow-up.svg');
+        size: contain;
+        repeat: no-repeat;
+        position: center center;
+      }
+    }
+  }
 }
 
 // Special slides:
