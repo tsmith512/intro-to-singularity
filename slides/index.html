@@ -250,6 +250,22 @@
           </p>
 
         </section>
+        <section>
+
+          <h1>Look at the Selectors</h1>
+
+          <img src="gfx/twelve-col-span.png" alt="Spanning the twelve column grid" />
+
+<pre><code class="language-scss">  .item    { @include grid-span(1,1); }
+  .cyan    { @include grid-span(1,1); }  .magenta { @include grid-span(2,2); }
+  .yellow  { @include grid-span(3,4); }  .black   { @include grid-span(4,7); }
+</code></pre>
+
+          <p><strong>Grid code added to CSS selector</strong> (class, element,
+            nth-child, etc.) <strong>you're already using.</strong> &rarr;
+            <strong>Lean Markup. Legible. Maintainable. Much easier in Drupal.</strong></p>
+
+        </section>
         <section data-state="theatre">
 
           <h1>No More Terrible Class Names!</h1>
