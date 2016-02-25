@@ -587,6 +587,21 @@ h2 {
         </section>
         <section>
 
+          <h1>How does Isolation work?</h1>
+
+          <img src="gfx/negative-margins.png" alt="Negative Margins" />
+
+          <p class="small">
+            Palantir's John Albin Wilkins <a href="https://www.palantir.net/blog/responsive-design-s-dirty-little-secret">explains</a>
+            this layout technique. Rounding inconsistencies could cause broken
+            floated layouts. A negative right margin allows "each adjacent float
+            to no longer sees the right edge of its siblings; it only sees the
+            left inner edge of the container." Thanks, <a href="http://john.albin.net/">John</a>!
+          </p>
+
+        </section>
+        <section>
+
           <h1>That&rsquo;s how we did this</h1>
           <h2>Combine multiple grids, breakpoints, and visual re-ordering.</h2>
 
