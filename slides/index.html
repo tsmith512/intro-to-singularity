@@ -57,8 +57,8 @@
           <h1>Prerequisites</h1>
           <h2>We're talking Sass and grids, so I assume you:</h2>
           <ul class="two-col">
-            <li>Know <a href="http://sass-lang.com">Sass</a>!<br /><small>Ruby or Node! And Compass is no longer a dependency.</small></li>
-            <li>Extend a project with <a href="http://bundler.io">Bundler</a> (Ruby) or <a href="http://bower.io/">Bower</a> or even <a href="https://www.npmjs.com/">npm</a> (Node).</li>
+            <li>Know <a href="http://sass-lang.com">Sass</a>!<br /><small>Ruby or Node! Compass is not a dependency.</small></li>
+            <li>Extend a project with <a href="http://bundler.io">Bundler</a> (Ruby) or <a href="https://www.npmjs.com/">npm</a> (Node).</li>
             <li>
               Have used at least one grid system or framework like
               <a href="http://960.gs">960</a>,
@@ -220,11 +220,29 @@
 
 <pre><code class="language-scss">@include add-grid(12);
 @include add-gutter(1/3);
-// ^^ Include once in a config partial or at the top of a Sass file above styles
+// ^^ Include once in a config partial or at the top of a Sass file above styles.
+//    THIS IS A GLOBAL CALL.
 .container { @include clearfix; }
 // ^^ Just clearfix your container, no need to add more grid calls</code></pre>
 
           <img src="gfx/bootstrap.png" alt="Bootstrap's Grid" />
+
+        </section>
+        <section data-state="ojo">
+
+          <h1>Add Grid is Global</h1>
+
+<pre><code class="language-scss">// Don't do this.
+@include add-grid(10);
+.container-A { @include add-grid(12); }
+.container-B { @include add-grid(7); }</code></pre>
+
+          <p>
+            Replacing your global grid can cause maintainability issues because
+            the grid isn't scoped to that selector or Sass code block. If you do
+            need to do this, look at
+            <a href="https://github.com/at-import/Singularity/wiki/Spanning-The-Grid#context-overrides" target="_blank">the <code>layout</code> mixin or overrides</a>.
+          </p>
 
         </section>
         <section>
